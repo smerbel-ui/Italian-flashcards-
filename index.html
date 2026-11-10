@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ARTIFACT-HEAD-START -->
+<title>Quaderno d'Italiano</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Kalam:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<!-- ARTIFACT-HEAD-END -->
+</head>
+<body>
+<!-- ARTIFACT-BODY-START -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#home" aria-label="Quaderno d'Italiano, home">
+      <span class="brand-mark" aria-hidden="true">Q</span>
+      <span class="brand-name">Quaderno <em>d'Italiano</em></span>
+    </a>
+    <nav class="tabs" aria-label="Sezioni">
+      <a href="#a2" data-route="a2">A2 <span class="tab-sub">Flashcard</span></a>
+      <a href="#a1" data-route="a1">A1 <span class="tab-sub">Flashcard</span></a>
+      <a href="#grammatica" data-route="grammatica">Grammatica <span class="tab-sub">A1</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- HOME -->
+  <section class="view" id="view-home" data-view="home">
+    <div class="home-intro">
+      <p class="eyebrow">Un quaderno per due</p>
+      <h1>Impariamo l'italiano insieme.</h1>
+      <p class="lede">Two flashcard decks and a little grammar book, one for each level. Tap a card to turn it over, mark what you know, and come back tomorrow to review the rest.</p>
+    </div>
+    <div class="home-grid">
+      <a class="home-card" href="#a2">
+        <span class="level-pill level-a2">A2</span>
+        <h2>Mazzo A2</h2>
+        <p>Everyday sentences, past and future tenses, <i>ci</i> and <i>ne</i>, idioms, proverbs and connecting words.</p>
+        <span class="home-meta" data-count="a2"></span>
+      </a>
+      <a class="home-card" href="#a1">
+        <span class="level-pill level-a1">A1</span>
+        <h2>Mazzo A1</h2>
+        <p>Greetings, survival phrases, numbers, days, family, food, places and the first verbs.</p>
+        <span class="home-meta" data-count="a1"></span>
+      </a>
+      <a class="home-card" href="#grammatica">
+        <span class="level-pill level-a1">A1</span>
+        <h2>La mia grammatica</h2>
+        <p>A small personal grammar book: verb conjugation tables, <i>essere</i> and <i>avere</i>, <i>piacere</i>, the first past tense, and a practice drill.</p>
+        <span class="home-meta">11 capitoli · 22 verbi</span>
+      </a>
+    </div>
+    <aside class="tips">
+      <h3>Come studiare</h3>
+      <ul>
+        <li><strong>Little and often.</strong> Ten minutes a day beats an hour on Sunday.</li>
+        <li><strong>Say it out loud.</strong> Press the speaker to hear the Italian, then repeat it.</li>
+        <li><strong>Flip the direction.</strong> Once Italian → English feels easy, try English → Italian.</li>
+        <li><strong>Quiz each other.</strong> The A2 learner can test the A1 deck, and the A1 learner can read the English side of the A2 deck.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- FLASHCARDS (shared by A1 and A2) -->
+  <section class="view" id="view-deck" data-view="deck" hidden>
+    <div class="deck-head">
+      <div>
+        <p class="eyebrow" id="deck-eyebrow"></p>
+        <h1 id="deck-title"></h1>
+        <p class="deck-sub" id="deck-sub"></p>
+      </div>
+      <div class="deck-stats" aria-live="polite">
+        <span class="stat"><b id="stat-known">0</b> lo so</span>
+        <span class="stat"><b id="stat-left">0</b> da ripassare</span>
+      </div>
+    </div>
+
+    <div class="chips" id="chips" role="tablist" aria-label="Categorie"></div>
+
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Direzione">
+        <button type="button" id="dir-it" class="seg-btn" aria-pressed="true">IT → EN</button>
+        <button type="button" id="dir-en" class="seg-btn" aria-pressed="false">EN → IT</button>
+      </div>
+      <button type="button" class="tool-btn" id="btn-shuffle">Mescola</button>
+      <label class="check"><input type="checkbox" id="hide-known"> Nascondi "lo so"</label>
+      <button type="button" class="tool-btn ghost" id="btn-reset">Azzera progressi</button>
+    </div>
+    <div class="confirm" id="reset-confirm" hidden>
+      <span>Reset progress for this deck?</span>
+      <button type="button" class="tool-btn danger" id="reset-yes">Sì, azzera</button>
+      <button type="button" class="tool-btn ghost" id="reset-no">Annulla</button>
+    </div>
+
+    <div class="stage">
+      <div class="card-wrap" id="card-wrap">
+        <button type="button" class="flashcard" id="flashcard" aria-label="Flashcard: tap to turn over">
+          <span class="face front">
+            <span class="face-cat" id="front-cat"></span>
+            <span class="face-text" id="front-text"></span>
+            <span class="face-hint">Tocca per girare</span>
+          </span>
+          <span class="face back">
+            <span class="face-cat" id="back-cat"></span>
+            <span class="face-text" id="back-text"></span>
+            <span class="face-note" id="back-note"></span>
+          </span>
+        </button>
+        <button type="button" class="speak" id="btn-speak" aria-label="Ascolta in italiano" title="Ascolta">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="known-badge" id="known-badge" hidden>Lo so</span>
+      </div>
+      <div class="empty" id="deck-empty" hidden>
+        <p class="empty-title">Bravissimo!</p>
+        <p>You've marked every card in this set as known. Untick "Nascondi lo so" or pick another category.</p>
+      </div>
+
+      <div class="card-actions">
+        <button type="button" class="nav-btn" id="btn-prev" aria-label="Carta precedente">‹</button>
+        <button type="button" class="act-btn again" id="btn-again">Ripassa</button>
+        <button type="button" class="act-btn know" id="btn-know">Lo so</button>
+        <button type="button" class="nav-btn" id="btn-next" aria-label="Carta successiva">›</button>
+      </div>
+      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+      <p class="position" id="position"></p>
+      <p class="keys">Tastiera: <kbd>Spazio</kbd> gira · <kbd>←</kbd> <kbd>→</kbd> scorri · <kbd>1</kbd> ripassa · <kbd>2</kbd> lo so · <kbd>S</kbd> ascolta</p>
+    </div>
+  </section>
+
+  <!-- GRAMMAR BOOK -->
+  <section class="view" id="view-grammatica" data-view="grammatica" hidden>
+    <div class="book">
+      <nav class="toc" aria-label="Indice">
+        <p class="toc-title">Indice</p>
+        <ol>
+          <li><a href="#grammatica" data-ch="ch-pronuncia">Come si legge</a></li>
+          <li><a href="#grammatica" data-ch="ch-pronomi">I pronomi</a></li>
+          <li><a href="#grammatica" data-ch="ch-essere-avere">Essere e avere</a></li>
+          <li><a href="#grammatica" data-ch="ch-regolari">Verbi regolari</a></li>
+          <li><a href="#grammatica" data-ch="ch-irregolari">Verbi irregolari</a></li>
+          <li><a href="#grammatica" data-ch="ch-riflessivi">Verbi riflessivi</a></li>
+          <li><a href="#grammatica" data-ch="ch-piacere">Piacere</a></li>
+          <li><a href="#grammatica" data-ch="ch-negazione">No e domande</a></li>
+          <li><a href="#grammatica" data-ch="ch-articoli">Articoli e nomi</a></li>
+          <li><a href="#grammatica" data-ch="ch-passato">Il passato prossimo</a></li>
+          <li><a href="#grammatica" data-ch="ch-pratica">Pratica</a></li>
+        </ol>
+      </nav>
+
+      <article class="chapters">
+        <header class="book-cover">
+          <p class="eyebrow">Livello A1</p>
+          <h1>La mia grammatica</h1>
+          <p class="lede">A pocket grammar for your first months of Italian. Each chapter is short: read the rule, look at the table, say the examples out loud. Finish with the practice drill at the end.</p>
+        </header>
+
+        <!-- 1 -->
+        <section class="chapter" id="ch-pronuncia">
+          <p class="ch-num">Capitolo 1</p>
+          <h2>Come si legge</h2>
+          <p>Italian is read the way it is written. Every vowel is pronounced, and a few letter groups are worth learning on day one.</p>
+          <div class="table-scroll">
+            <table class="gtable">
+              <thead><tr><th>Letters</th><th>Sounds like</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td><b>c</b> + e, i</td><td>"ch" in <i>church</i></td><td>cena, ciao</td></tr>
+                <tr><td><b>ch</b> + e, i</td><td>"k" in <i>kite</i></td><td>che, chiave</td></tr>
+                <tr><td><b>g</b> + e, i</td><td>"j" in <i>jam</i></td><td>gelato, giorno</td></tr>
+                <tr><td><b>gh</b> + e, i</td><td>"g" in <i>go</i></td><td>spaghetti, ghiaccio</td></tr>
+                <tr><td><b>gli</b></td><td>"lli" in <i>million</i></td><td>figlio, moglie</td></tr>
+                <tr><td><b>gn</b></td><td>"ny" in <i>canyon</i></td><td>bagno, gnocchi</td></tr>
+                <tr><td><b>sc</b> + e, i</td><td>"sh" in <i>shop</i></td><td>pesce, uscire</td></tr>
+                <tr><td><b>h</b></td><td>always silent</td><td>ho, hanno</td></tr>
+                <tr><td>double letters</td><td>hold them a little longer</td><td>pala ≠ palla, nono ≠ nonno</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="margin-note">The accent mark shows the stressed final vowel: <i>città, perché, così</i>. It also changes meaning: <i>e</i> = and, <i>è</i> = is.</p>
+        </section>
+
+        <!-- 2 -->
+        <section class="chapter" id="ch-pronomi">
+          <p class="ch-num">Capitolo 2</p>
+          <h2>I pronomi soggetto</h2>
+          <p>Every verb table in this book follows the same six people. Italians usually <b>drop the pronoun</b> because the verb ending already says who it is: <i>parlo</i> already means "I speak".</p>
+          <div class="table-scroll">
+            <table class="gtable compact">
+              <thead><tr><th>Italiano</th><th>English</th></tr></thead>
+              <tbody id="pronoun-rows"></tbody>
+            </table>
+          </div>
+          <h3>Tu o Lei?</h3>
+          <p>Use <b>tu</b> with friends, family, children and people your age in casual settings. Use <b>Lei</b> (capital L, the formal "you") with shop staff, waiters, older people and anyone you don't know. Lei takes the same verb form as <i>lui / lei</i>.</p>
+          <div class="example-pair">
+            <p><span class="ex-it">Come stai?</span> <span class="ex-en">How are you? (to a friend)</span></p>
+            <p><span class="ex-it">Come sta?</span> <span class="ex-en">How are you? (formal)</span></p>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="chapter" id="ch-essere-avere">
+          <p class="ch-num">Capitolo 3</p>
+          <h2>Essere e avere</h2>
+          <p>The two most important verbs. Both are irregular, so learn them by heart first. You will also need them later to build the past tense.</p>
+          <div class="verb-grid" data-verbs="essere,avere"></div>
+          <h3>Italian "has" where English "is"</h3>
+          <p>Many feelings use <b>avere</b> in Italian:</p>
+          <div class="table-scroll">
+            <table class="gtable compact">
+              <tbody>
+                <tr><td>avere fame</td><td>to be hungry</td></tr>
+                <tr><td>avere sete</td><td>to be thirsty</td></tr>
+                <tr><td>avere caldo / freddo</td><td>to be hot / cold</td></tr>
+                <tr><td>avere sonno</td><td>to be sleepy</td></tr>
+                <tr><td>avere paura</td><td>to be afraid</td></tr>
+                <tr><td>avere ragione</td><td>to be right</td></tr>
+                <tr><td>avere ... anni</td><td>to be ... years old</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>C'è e ci sono</h3>
+          <p><b>C'è</b> = there is, <b>ci sono</b> = there are. <i>C'è un bar qui vicino? Ci sono due camere.</i></p>
+        </section>
+
+        <!-- 4 -->
+        <section class="chapter" id="ch-regolari">
+          <p class="ch-num">Capitolo 4</p>
+          <h2>Verbi regolari</h2>
+          <p>Italian verbs end in <b>-are</b>, <b>-ere</b> or <b>-ire</b>. To conjugate a regular verb, remove the ending and add the endings below. Most new verbs you meet will be <b>-are</b> verbs.</p>
+          <div class="table-scroll">
+            <table class="gtable endings" id="endings-table"></table>
+          </div>
+          <p class="margin-note">Notice that <b>io</b> always ends in -o, <b>tu</b> in -i and <b>noi</b> in -iamo. That is already half the work.</p>
+          <h3>Esempi</h3>
+          <div class="verb-grid" data-verbs="parlare,prendere,dormire,capire"></div>
+          <h3>Two spelling rules</h3>
+          <div class="verb-grid" data-verbs="mangiare,cercare"></div>
+          <p>Some -ire verbs add <b>-isc-</b> like <i>capire</i>: finire (to finish), preferire (to prefer), pulire (to clean).</p>
+        </section>
+
+        <!-- 5 -->
+        <section class="chapter" id="ch-irregolari">
+          <p class="ch-num">Capitolo 5</p>
+          <h2>Verbi irregolari</h2>
+          <p>These are the irregular verbs you will hear every day. Learn them a few at a time. <b>Volere, potere, dovere</b> are followed directly by an infinitive: <i>voglio mangiare, posso entrare, devo andare</i>.</p>
+          <div class="verb-grid" data-verbs="andare,fare,stare,venire,volere,potere,dovere,sapere,dire,uscire,bere,dare"></div>
+        </section>
+
+        <!-- 6 -->
+        <section class="chapter" id="ch-riflessivi">
+          <p class="ch-num">Capitolo 6</p>
+          <h2>Verbi riflessivi</h2>
+          <p>A reflexive verb is something you do to yourself. In the dictionary it ends in <b>-si</b>. Put the small pronoun (<i>mi, ti, si, ci, vi, si</i>) in front of the verb.</p>
+          <div class="verb-grid" data-verbs="chiamarsi,alzarsi"></div>
+          <p>Others in the same pattern: lavarsi (to wash), vestirsi (to get dressed), svegliarsi (to wake up), divertirsi (to have fun).</p>
+        </section>
+
+        <!-- 7 -->
+        <section class="chapter" id="ch-piacere">
+          <p class="ch-num">Capitolo 7</p>
+          <h2>Piacere: mi piace</h2>
+          <p>Italian says "it pleases me" instead of "I like it". The verb agrees with the thing you like, not with you.</p>
+          <div class="table-scroll">
+            <table class="gtable">
+              <thead><tr><th></th><th>One thing / a verb</th><th>Several things</th></tr></thead>
+              <tbody>
+                <tr><td>I like</td><td><b>mi piace</b> la pizza</td><td><b>mi piacciono</b> gli spaghetti</td></tr>
+                <tr><td>you like</td><td><b>ti piace</b> ballare</td><td><b>ti piacciono</b> i cani</td></tr>
+                <tr><td>he / she likes</td><td><b>gli / le piace</b> il mare</td><td><b>gli / le piacciono</b> i film</td></tr>
+                <tr><td>we like</td><td><b>ci piace</b> Roma</td><td><b>ci piacciono</b> le lasagne</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="example-pair">
+            <p><span class="ex-it">Ti piace il caffè? Sì, mi piace molto.</span> <span class="ex-en">Do you like coffee? Yes, I like it a lot.</span></p>
+            <p><span class="ex-it">Non mi piacciono i funghi.</span> <span class="ex-en">I don't like mushrooms.</span></p>
+          </div>
+        </section>
+
+        <!-- 8 -->
+        <section class="chapter" id="ch-negazione">
+          <p class="ch-num">Capitolo 8</p>
+          <h2>Dire di no e fare domande</h2>
+          <h3>Negazione</h3>
+          <p>Put <b>non</b> in front of the verb. That's it.</p>
+          <div class="example-pair">
+            <p><span class="ex-it">Parlo tedesco. → <b>Non</b> parlo tedesco.</span> <span class="ex-en">I speak German. → I don't speak German.</span></p>
+            <p><span class="ex-it"><b>Non</b> mangio <b>mai</b> la carne.</span> <span class="ex-en">I never eat meat. (Italian keeps both words)</span></p>
+          </div>
+          <h3>Domande</h3>
+          <p>A question is often just a statement with your voice going up at the end. The word order does not change.</p>
+          <div class="example-pair">
+            <p><span class="ex-it">Sei stanca.</span> <span class="ex-en">You're tired.</span></p>
+            <p><span class="ex-it">Sei stanca?</span> <span class="ex-en">Are you tired?</span></p>
+          </div>
+          <p>Question words: <i>chi</i> (who), <i>che cosa</i> (what), <i>dove</i> (where), <i>quando</i> (when), <i>perché</i> (why), <i>come</i> (how), <i>quanto</i> (how much), <i>quale</i> (which).</p>
+        </section>
+
+        <!-- 9 -->
+        <section class="chapter" id="ch-articoli">
+          <p class="ch-num">Capitolo 9</p>
+          <h2>Articoli e nomi</h2>
+          <p>Every noun is masculine or feminine. Most masculine nouns end in <b>-o</b> (plural <b>-i</b>), most feminine nouns end in <b>-a</b> (plural <b>-e</b>). Nouns ending in <b>-e</b> can be either, and become <b>-i</b> in the plural.</p>
+          <div class="table-scroll">
+            <table class="gtable">
+              <thead><tr><th></th><th>the (singular)</th><th>the (plural)</th><th>a / an</th></tr></thead>
+              <tbody>
+                <tr><td>masculine</td><td><b>il</b> libro</td><td><b>i</b> libri</td><td><b>un</b> libro</td></tr>
+                <tr><td>masc. before vowel</td><td><b>l'</b>amico</td><td><b>gli</b> amici</td><td><b>un</b> amico</td></tr>
+                <tr><td>masc. before s+consonant, z</td><td><b>lo</b> zaino</td><td><b>gli</b> zaini</td><td><b>uno</b> zaino</td></tr>
+                <tr><td>feminine</td><td><b>la</b> casa</td><td><b>le</b> case</td><td><b>una</b> casa</td></tr>
+                <tr><td>fem. before vowel</td><td><b>l'</b>amica</td><td><b>le</b> amiche</td><td><b>un'</b>amica</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="margin-note">Adjectives match the noun: <i>un ragazzo alto, una ragazza alta, due ragazzi alti, due ragazze alte</i>.</p>
+        </section>
+
+        <!-- 10 -->
+        <section class="chapter" id="ch-passato">
+          <p class="ch-num">Capitolo 10</p>
+          <h2>Il passato prossimo</h2>
+          <p>The everyday past tense ("I ate", "I have eaten"). It has two parts: the present of <b>avere</b> or <b>essere</b> + the past participle.</p>
+          <div class="table-scroll">
+            <table class="gtable">
+              <thead><tr><th>Infinitive</th><th>Participle</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>parl<b>are</b></td><td>parl<b>ato</b></td><td>Ho parlato con Marco.</td></tr>
+                <tr><td>vend<b>ere</b></td><td>vend<b>uto</b></td><td>Abbiamo venduto la macchina.</td></tr>
+                <tr><td>dorm<b>ire</b></td><td>dorm<b>ito</b></td><td>Hai dormito bene?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Avere or essere?</h3>
+          <p>Most verbs use <b>avere</b>. Verbs of movement and change (andare, venire, arrivare, partire, uscire, tornare, restare, nascere) and reflexive verbs use <b>essere</b>. With essere, the participle changes like an adjective: <b>-o, -a, -i, -e</b>.</p>
+          <div class="pp-pair">
+            <div class="table-scroll">
+              <table class="gtable compact">
+                <thead><tr><th colspan="2">mangiare (avere)</th></tr></thead>
+                <tbody>
+                  <tr><td>io</td><td>ho mangiato</td></tr>
+                  <tr><td>tu</td><td>hai mangiato</td></tr>
+                  <tr><td>lui / lei</td><td>ha mangiato</td></tr>
+                  <tr><td>noi</td><td>abbiamo mangiato</td></tr>
+                  <tr><td>voi</td><td>avete mangiato</td></tr>
+                  <tr><td>loro</td><td>hanno mangiato</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-scroll">
+              <table class="gtable compact">
+                <thead><tr><th colspan="2">andare (essere)</th></tr></thead>
+                <tbody>
+                  <tr><td>io</td><td>sono andato / andata</td></tr>
+                  <tr><td>tu</td><td>sei andato / andata</td></tr>
+                  <tr><td>lui / lei</td><td>è andato / andata</td></tr>
+                  <tr><td>noi</td><td>siamo andati / andate</td></tr>
+                  <tr><td>voi</td><td>siete andati / andate</td></tr>
+                  <tr><td>loro</td><td>sono andati / andate</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3>Irregular participles to know</h3>
+          <div class="table-scroll">
+            <table class="gtable compact" id="participle-table"></table>
+          </div>
+          <div class="example-pair">
+            <p><span class="ex-it">Ieri sono andata a Roma e ho visto il Colosseo.</span> <span class="ex-en">Yesterday I went to Rome and saw the Colosseum.</span></p>
+          </div>
+        </section>
+
+        <!-- 11 -->
+        <section class="chapter" id="ch-pratica">
+          <p class="ch-num">Capitolo 11</p>
+          <h2>Pratica: coniuga!</h2>
+          <p>Write the correct present-tense form. Accents count, but you can type <i>e'</i> for <i>è</i> or <i>puo'</i> for <i>può</i>. For reflexive verbs, include the little pronoun: <i>mi chiamo</i>.</p>
+          <div class="drill">
+            <div class="drill-filter seg" role="group" aria-label="Quali verbi">
+              <button type="button" class="seg-btn" data-set="all" aria-pressed="true">Tutti</button>
+              <button type="button" class="seg-btn" data-set="reg" aria-pressed="false">Regolari</button>
+              <button type="button" class="seg-btn" data-set="irr" aria-pressed="false">Irregolari</button>
+            </div>
+            <p class="drill-prompt"><span class="drill-person" id="drill-person"></span> <span class="drill-verb" id="drill-verb"></span></p>
+            <p class="drill-gloss" id="drill-gloss"></p>
+            <form class="drill-form" id="drill-form" autocomplete="off">
+              <label for="drill-input" class="sr-only">La tua risposta</label>
+              <input id="drill-input" type="text" inputmode="text" autocapitalize="off" spellcheck="false" placeholder="scrivi qui…">
+              <button type="submit" class="act-btn know">Controlla</button>
+              <button type="button" class="tool-btn ghost" id="drill-skip">Mostra</button>
+            </form>
+            <p class="drill-feedback" id="drill-feedback" aria-live="polite"></p>
+            <p class="drill-score">Giuste: <b id="drill-right">0</b> · Tentativi: <b id="drill-total">0</b> · Serie: <b id="drill-streak">0</b></p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="foot"><p>Quaderno d'Italiano · A1 &amp; A2 · Progress is saved in this browser only.</p></footer>
+
+<script src="data/a2-deck.js"></script>
+<script src="data/a1-deck.js"></script>
+<script src="data/grammar.js"></script>
+<script src="app.js"></script>
+<!-- ARTIFACT-BODY-END -->
+</body>
+</html>
