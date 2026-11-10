@@ -5,7 +5,7 @@ A small, offline-friendly study site for two Italian learners:
 | Section | Level | What's inside |
 |---|---|---|
 | **Mazzo A2** (`#a2`) | A2 | 161 cards: everyday conversation, restaurant & shops, travel, past tenses, future & conditional, *ci* / *ne*, idioms (*modi di dire*), proverbs, connecting words, colloquial Italian. Most cards carry a short grammar note on the back. |
-| **Mazzo A1** (`#a1`) | A1 | 129 cards: greetings, courtesy, survival phrases, question words, numbers, time, family, food, places, first verbs, adjectives & colours. |
+| **Mazzo A1** (`#a1`) | A1 | 130 cards: greetings, courtesy, survival phrases, question words, numbers, time, family, food, places, first verbs, adjectives & colours. |
 | **La mia grammatica** (`#grammatica`) | A1 | A pocket grammar book in 11 chapters: pronunciation, pronouns & *tu/Lei*, *essere* & *avere*, regular verbs, 12 key irregular verbs, reflexives, *piacere*, negation & questions, articles, a first look at the *passato prossimo*, and a conjugation drill. |
 
 ## Using it
