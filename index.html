@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3f94">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Quaderno">
 <!-- ARTIFACT-HEAD-START -->
 <title>Quaderno d'Italiano</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -35,7 +42,7 @@
     <div class="home-intro">
       <p class="eyebrow">Un quaderno per due</p>
       <h1>Impariamo l'italiano insieme.</h1>
-      <p class="lede">Two flashcard decks and a little grammar book, one for each level. Tap a card to turn it over, mark what you know, and come back tomorrow to review the rest.</p>
+      <p class="lede">Two flashcard decks and a little grammar book, one for each level. Guess each card, reveal the answer, mark whether you got it right, and come back tomorrow to review the rest.</p>
     </div>
     <div class="home-grid">
       <a class="home-card" href="#a2">
@@ -91,6 +98,7 @@
       </div>
       <button type="button" class="tool-btn" id="btn-shuffle">Mescola</button>
       <label class="check"><input type="checkbox" id="hide-known"> Nascondi "lo so"</label>
+      <label class="check"><input type="checkbox" id="auto-speak"> Audio automatico</label>
       <button type="button" class="tool-btn ghost" id="btn-reset">Azzera progressi</button>
     </div>
     <div class="confirm" id="reset-confirm" hidden>
@@ -101,37 +109,45 @@
 
     <div class="stage">
       <div class="card-wrap" id="card-wrap">
-        <button type="button" class="flashcard" id="flashcard" aria-label="Flashcard: tap to turn over">
-          <span class="face front">
-            <span class="face-cat" id="front-cat"></span>
-            <span class="face-text" id="front-text"></span>
-            <span class="face-hint">Tocca per girare</span>
-          </span>
-          <span class="face back">
-            <span class="face-cat" id="back-cat"></span>
-            <span class="face-text" id="back-text"></span>
-            <span class="face-note" id="back-note"></span>
-          </span>
-        </button>
-        <button type="button" class="speak" id="btn-speak" aria-label="Ascolta in italiano" title="Ascolta">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </button>
+        <div class="flashcard" id="flashcard">
+          <span class="face-cat" id="card-cat"></span>
+          <button type="button" class="speak" id="btn-speak" aria-label="Ascolta in italiano" title="Ascolta (S)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <p class="face-label" id="front-label">Italiano</p>
+          <p class="face-text" id="front-text"></p>
+          <p class="guess-hint" id="guess-hint">Think of the answer, then reveal it.</p>
+          <button type="button" class="reveal-btn" id="btn-reveal">Mostra la risposta</button>
+          <div class="answer" id="answer" hidden>
+            <p class="face-label" id="back-label">English</p>
+            <p class="face-text answer-text" id="back-text"></p>
+            <p class="face-note" id="back-note"></p>
+          </div>
+        </div>
         <span class="known-badge" id="known-badge" hidden>Lo so</span>
       </div>
+      <p class="audio-msg" id="audio-msg" hidden></p>
       <div class="empty" id="deck-empty" hidden>
         <p class="empty-title">Bravissimo!</p>
         <p>You've marked every card in this set as known. Untick "Nascondi lo so" or pick another category.</p>
       </div>
 
-      <div class="card-actions">
+      <div class="grade" id="grade" hidden>
+        <p class="grade-q">Did you get it?</p>
+        <div class="grade-btns">
+          <button type="button" class="act-btn again" id="btn-again">✗ Sbagliato<small>Got it wrong</small></button>
+          <button type="button" class="act-btn know" id="btn-know">✓ Giusto<small>Got it right</small></button>
+        </div>
+      </div>
+
+      <div class="nav-row">
         <button type="button" class="nav-btn" id="btn-prev" aria-label="Carta precedente">‹</button>
-        <button type="button" class="act-btn again" id="btn-again">Ripassa</button>
-        <button type="button" class="act-btn know" id="btn-know">Lo so</button>
+        <p class="position" id="position"></p>
         <button type="button" class="nav-btn" id="btn-next" aria-label="Carta successiva">›</button>
       </div>
-      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
-      <p class="position" id="position"></p>
-      <p class="keys">Tastiera: <kbd>Spazio</kbd> gira · <kbd>←</kbd> <kbd>→</kbd> scorri · <kbd>1</kbd> ripassa · <kbd>2</kbd> lo so · <kbd>S</kbd> ascolta</p>
+      <p class="session" id="session" aria-live="polite"></p>
+      <div class="progress" title="Cards marked as known"><div class="progress-bar" id="progress-bar"></div></div>
+      <p class="keys">Tastiera: <kbd>Spazio</kbd> mostra · <kbd>1</kbd> sbagliato · <kbd>2</kbd> giusto · <kbd>←</kbd> <kbd>→</kbd> scorri · <kbd>S</kbd> ascolta</p>
     </div>
   </section>
 
@@ -161,6 +177,7 @@
           <h1>La mia grammatica</h1>
           <p class="lede">A pocket grammar for your first months of Italian. Each chapter is short: read the rule, look at the table, say the examples out loud. Finish with the practice drill at the end.</p>
         </header>
+        <p class="audio-msg" hidden></p>
 
         <!-- 1 -->
         <section class="chapter" id="ch-pronuncia">

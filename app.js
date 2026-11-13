@@ -13,30 +13,65 @@
     try { localStorage.setItem("quaderno:" + key, JSON.stringify(value)); } catch (e) { /* ignore */ }
   }
 
-  // ---------- Speech (Italian voice if the device has one) ----------
-  var canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
-  var itVoice = null;
+  // ---------- Speech (uses the device's own Italian voice) ----------
+  var synth = window.speechSynthesis;
+  var canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  var itVoice = null, voicesLoaded = false;
   function pickVoice() {
     try {
-      var voices = window.speechSynthesis.getVoices();
-      itVoice = voices.filter(function (v) { return /^it/i.test(v.lang); })[0] || null;
+      var voices = synth.getVoices() || [];
+      if (!voices.length) return;
+      voicesLoaded = true;
+      var it = voices.filter(function (v) { return /^it([-_]|$)/i.test(v.lang); });
+      itVoice = it.filter(function (v) { return /it[-_]IT/i.test(v.lang) && v.localService; })[0] ||
+                it.filter(function (v) { return /it[-_]IT/i.test(v.lang); })[0] || it[0] || null;
     } catch (e) { itVoice = null; }
   }
   if (canSpeak) {
     pickVoice();
-    try { window.speechSynthesis.onvoiceschanged = pickVoice; } catch (e) { /* ignore */ }
+    try { synth.addEventListener("voiceschanged", pickVoice); } catch (e) { synth.onvoiceschanged = pickVoice; }
   }
-  function speak(text, rate) {
-    if (!canSpeak) return;
-    try {
-      window.speechSynthesis.cancel();
-      var u = new SpeechSynthesisUtterance(text.replace(/\s\/\s/g, ", ").replace(/\.\.\./g, " "));
-      u.lang = "it-IT";
-      if (itVoice) u.voice = itVoice;
-      u.rate = rate || 0.9;
-      window.speechSynthesis.speak(u);
-    } catch (e) { /* ignore */ }
+
+  var AUDIO_HELP = {
+    unsupported: "This browser can't read text aloud. Open the page in Safari (iPhone) or Chrome (Android / computer).",
+    novoice: "Your device has no Italian voice, so the audio may sound English. iPhone: Settings → Accessibility → Spoken Content → Voices → Italian. Android: Settings → Text-to-speech → install Italian.",
+    silent: "No sound started. On iPhone, turn off silent mode (the switch on the side) and turn the volume up. If you opened this inside another app, try it in Safari or Chrome.",
+    help: "No sound? 1) Turn the volume up and, on iPhone, switch off silent mode. 2) Install an Italian voice: iPhone Settings → Accessibility → Spoken Content → Voices → Italian; Android Settings → Text-to-speech. 3) Open the page directly in Safari or Chrome rather than inside another app."
+  };
+  function audioMessage(kind) {
+    Array.prototype.forEach.call(document.querySelectorAll(".audio-msg"), function (el) {
+      el.textContent = AUDIO_HELP[kind] || "";
+      el.hidden = !kind;
+    });
   }
+
+  var speakToken = 0;
+  function speak(text, rate, btn) {
+    if (!canSpeak) { audioMessage("unsupported"); return; }
+    if (!voicesLoaded) pickVoice();
+    if (voicesLoaded && !itVoice) audioMessage("novoice");
+    var token = ++speakToken, started = false;
+    var clean = text.replace(/\s\/\s/g, ", ").replace(/\.\.\./g, " ").replace(/…/g, " ");
+    var u = new SpeechSynthesisUtterance(clean);
+    u.lang = itVoice ? itVoice.lang : "it-IT";
+    if (itVoice) u.voice = itVoice;
+    u.rate = rate || 0.9;
+    u.onstart = function () { started = true; if (btn) btn.classList.add("playing"); };
+    u.onend = function () { if (btn) btn.classList.remove("playing"); };
+    u.onerror = function (e) {
+      if (btn) btn.classList.remove("playing");
+      if (e && e.error !== "interrupted" && e.error !== "canceled" && token === speakToken) audioMessage("silent");
+    };
+    var start = function () {
+      try { synth.resume(); synth.speak(u); } catch (e) { audioMessage("silent"); }
+    };
+    // Chrome drops an utterance queued right after cancel(), so give it a moment.
+    if (synth.speaking || synth.pending) { synth.cancel(); setTimeout(start, 120); } else { start(); }
+    setTimeout(function () {
+      if (!started && token === speakToken) audioMessage("silent");
+    }, 3000);
+  }
+
   var SPEAK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 
   function shuffle(arr) {
@@ -53,17 +88,18 @@
   }
 
   // =====================================================================
-  // Flashcards
+  // Flashcards: guess -> reveal -> mark right or wrong
   // =====================================================================
   var ALL = "Tutte";
   var state = {
-    deckId: null, cat: ALL, dir: load("dir", "it"), hideKnown: false,
-    shuffled: false, order: [], pos: 0, flipped: false, known: {}
+    deckId: null, cat: ALL, dir: load("dir", "it"), hideKnown: false, autoSpeak: load("autospeak", false),
+    shuffled: false, order: [], pos: 0, revealed: false, known: {}, right: 0, wrong: 0
   };
 
   function deck() { return DECKS[state.deckId]; }
   function cardKey(c) { return c[0]; }
   function isKnown(i) { return !!state.known[cardKey(deck().cards[i])]; }
+  function current() { return deck().cards[state.order[state.pos]]; }
 
   function categories() {
     var seen = [], counts = {};
@@ -75,7 +111,7 @@
   }
 
   function buildOrder(keepCurrent) {
-    var current = state.order[state.pos];
+    var cur = state.order[state.pos];
     var idx = [];
     deck().cards.forEach(function (c, i) {
       if (state.cat !== ALL && c[2] !== state.cat) return;
@@ -84,9 +120,8 @@
     });
     if (state.shuffled) shuffle(idx);
     state.order = idx;
-    var p = keepCurrent ? idx.indexOf(current) : -1;
-    state.pos = p >= 0 ? p : Math.min(state.pos, Math.max(idx.length - 1, 0));
-    if (!keepCurrent) state.pos = 0;
+    var p = keepCurrent ? idx.indexOf(cur) : -1;
+    state.pos = p >= 0 ? p : 0;
   }
 
   function renderChips() {
@@ -98,16 +133,6 @@
     $("chips").innerHTML = html;
   }
 
-  function unflipInstantly() {
-    var fc = $("flashcard");
-    if (!state.flipped) return;
-    fc.classList.add("no-anim");
-    fc.classList.remove("flipped");
-    void fc.offsetWidth;
-    fc.classList.remove("no-anim");
-    state.flipped = false;
-  }
-
   function renderCard() {
     var d = deck();
     var total = d.cards.length;
@@ -115,26 +140,34 @@
     $("stat-known").textContent = knownCount;
     $("stat-left").textContent = total - knownCount;
     $("progress-bar").style.width = (total ? (knownCount / total) * 100 : 0) + "%";
+    $("session").innerHTML = "Questa sessione: <b class=\"ok\">✓ " + state.right + "</b> giuste · <b class=\"no\">✗ " + state.wrong + "</b> sbagliate" +
+      (canSpeak ? ' · <button type="button" class="linklike" id="audio-help">Nessun suono?</button>' : "");
 
     var empty = state.order.length === 0;
     $("card-wrap").hidden = empty;
     $("deck-empty").hidden = !empty;
-    ["btn-prev", "btn-next", "btn-again", "btn-know"].forEach(function (id) { $(id).disabled = empty; });
-    if (empty) { $("position").textContent = ""; return; }
+    $("btn-prev").disabled = empty;
+    $("btn-next").disabled = empty;
+    if (empty) { $("grade").hidden = true; $("position").textContent = ""; return; }
 
-    var i = state.order[state.pos];
-    var c = d.cards[i];
-    var it = c[0], en = c[1], cat = c[2], note = c[3] || "";
-    var frontText = state.dir === "it" ? it : en;
-    var backText = state.dir === "it" ? en : it;
-    $("front-cat").textContent = cat;
-    $("back-cat").textContent = cat;
-    $("front-text").textContent = frontText;
-    $("back-text").textContent = backText;
-    $("back-note").textContent = note;
-    $("known-badge").hidden = !isKnown(i);
-    $("position").textContent = "Carta " + (state.pos + 1) + " di " + state.order.length;
-    $("flashcard").setAttribute("aria-label", (state.flipped ? "Answer: " + backText : "Card: " + frontText) + ". Tap to turn over.");
+    var c = current();
+    var it = state.dir === "it";
+    $("card-cat").textContent = c[2];
+    $("front-label").textContent = it ? "Italiano" : "English";
+    $("back-label").textContent = it ? "English" : "Italiano";
+    $("front-text").textContent = it ? c[0] : c[1];
+    $("back-text").textContent = it ? c[1] : c[0];
+    $("back-note").textContent = c[3] || "";
+    $("answer").hidden = !state.revealed;
+    $("btn-reveal").hidden = state.revealed;
+    $("guess-hint").hidden = state.revealed;
+    $("guess-hint").textContent = it ? "What does it mean in English? Guess, then reveal." : "How do you say it in Italian? Guess, then reveal.";
+    $("grade").hidden = !state.revealed;
+    $("flashcard").classList.toggle("revealed", state.revealed);
+    // In EN -> IT mode the speaker would give the answer away, so it appears after revealing.
+    $("btn-speak").hidden = !canSpeak || (!it && !state.revealed);
+    $("known-badge").hidden = !isKnown(state.order[state.pos]);
+    $("position").textContent = (state.pos + 1) + " / " + state.order.length;
   }
 
   function renderDeckUI() {
@@ -145,116 +178,141 @@
     $("dir-it").setAttribute("aria-pressed", state.dir === "it");
     $("dir-en").setAttribute("aria-pressed", state.dir === "en");
     $("hide-known").checked = state.hideKnown;
+    $("auto-speak").checked = state.autoSpeak;
+    $("auto-speak").parentNode.hidden = !canSpeak;
     $("btn-shuffle").textContent = state.shuffled ? "In ordine" : "Mescola";
-    $("btn-speak").hidden = !canSpeak;
     $("reset-confirm").hidden = true;
     renderChips();
     renderCard();
+  }
+
+  function speakCurrent() {
+    if (!state.order.length) return;
+    speak(current()[0], 0.9, $("btn-speak"));
+  }
+
+  // Called whenever a new card comes up.
+  function showCard() {
+    state.revealed = false;
+    renderCard();
+    if (state.autoSpeak && state.dir === "it" && state.order.length) speakCurrent();
   }
 
   function openDeck(id) {
     if (state.deckId !== id) {
       state.deckId = id;
       state.cat = ALL;
-      state.pos = 0;
       state.known = load("known:" + id, {});
       state.hideKnown = load("hide:" + id, false);
       state.shuffled = false;
-      unflipInstantly();
+      state.revealed = false;
+      state.right = 0; state.wrong = 0;
       buildOrder(false);
     }
+    audioMessage(null);
     renderDeckUI();
   }
 
   function go(delta) {
     if (!state.order.length) return;
-    unflipInstantly();
     state.pos = (state.pos + delta + state.order.length) % state.order.length;
-    renderCard();
+    showCard();
   }
 
-  function flip() {
-    if (!state.order.length) return;
-    state.flipped = !state.flipped;
-    $("flashcard").classList.toggle("flipped", state.flipped);
+  function reveal() {
+    if (!state.order.length || state.revealed) return;
+    state.revealed = true;
     renderCard();
+    if (state.autoSpeak && state.dir === "en") speakCurrent();
   }
 
-  function markKnown() {
+  function gotRight() {
     if (!state.order.length) return;
+    if (!state.revealed) { reveal(); return; }
     var i = state.order[state.pos];
     state.known[cardKey(deck().cards[i])] = 1;
     save("known:" + state.deckId, state.known);
-    unflipInstantly();
+    state.right++;
     if (state.hideKnown) {
       state.order.splice(state.pos, 1);
       if (state.pos >= state.order.length) state.pos = 0;
-      renderCard();
+      showCard();
     } else {
       go(1);
     }
   }
 
-  function markAgain() {
+  function gotWrong() {
     if (!state.order.length) return;
+    if (!state.revealed) { reveal(); return; }
     var i = state.order[state.pos];
     delete state.known[cardKey(deck().cards[i])];
     save("known:" + state.deckId, state.known);
-    unflipInstantly();
+    state.wrong++;
     // Bring this card back a few cards later in the session.
     if (state.order.length > 2) {
       state.order.splice(state.pos, 1);
-      var at = Math.min(state.pos + 4, state.order.length);
-      state.order.splice(at, 0, i);
+      state.order.splice(Math.min(state.pos + 4, state.order.length), 0, i);
       if (state.pos >= state.order.length) state.pos = 0;
-      renderCard();
+      showCard();
     } else {
       go(1);
     }
   }
 
-  function speakCurrent() {
-    if (!state.order.length) return;
-    speak(deck().cards[state.order[state.pos]][0]);
-  }
-
   function wireDeck() {
-    $("flashcard").addEventListener("click", flip);
+    $("flashcard").addEventListener("click", function (e) {
+      if (e.target.closest(".speak")) return;
+      reveal();
+    });
+    $("btn-reveal").addEventListener("click", function (e) { e.stopPropagation(); reveal(); });
     $("btn-next").addEventListener("click", function () { go(1); });
     $("btn-prev").addEventListener("click", function () { go(-1); });
-    $("btn-know").addEventListener("click", markKnown);
-    $("btn-again").addEventListener("click", markAgain);
+    $("btn-know").addEventListener("click", gotRight);
+    $("btn-again").addEventListener("click", gotWrong);
     $("btn-speak").addEventListener("click", function (e) { e.stopPropagation(); speakCurrent(); });
+    $("session").addEventListener("click", function (e) {
+      if (e.target.id === "audio-help") {
+        var el = $("audio-msg");
+        if (el.hidden || el.textContent !== AUDIO_HELP.help) audioMessage("help"); else audioMessage(null);
+      }
+    });
     $("chips").addEventListener("click", function (e) {
       var b = e.target.closest(".chip");
       if (!b) return;
       state.cat = b.getAttribute("data-cat");
-      unflipInstantly();
       buildOrder(false);
+      state.revealed = false;
       renderDeckUI();
     });
-    function setDir(d) { state.dir = d; save("dir", d); unflipInstantly(); renderDeckUI(); }
+    function setDir(d) { state.dir = d; save("dir", d); state.revealed = false; renderDeckUI(); }
     $("dir-it").addEventListener("click", function () { setDir("it"); });
     $("dir-en").addEventListener("click", function () { setDir("en"); });
     $("btn-shuffle").addEventListener("click", function () {
       state.shuffled = !state.shuffled;
-      unflipInstantly();
       buildOrder(false);
+      state.revealed = false;
       renderDeckUI();
     });
     $("hide-known").addEventListener("change", function (e) {
       state.hideKnown = e.target.checked;
       save("hide:" + state.deckId, state.hideKnown);
-      unflipInstantly();
       buildOrder(true);
       renderDeckUI();
+    });
+    $("auto-speak").addEventListener("change", function (e) {
+      state.autoSpeak = e.target.checked;
+      save("autospeak", state.autoSpeak);
+      if (state.autoSpeak && (state.dir === "it" || state.revealed)) speakCurrent();
     });
     $("btn-reset").addEventListener("click", function () { $("reset-confirm").hidden = false; });
     $("reset-no").addEventListener("click", function () { $("reset-confirm").hidden = true; });
     $("reset-yes").addEventListener("click", function () {
       state.known = {};
+      state.right = 0; state.wrong = 0;
       save("known:" + state.deckId, state.known);
       buildOrder(false);
+      state.revealed = false;
       renderDeckUI();
     });
 
@@ -263,14 +321,14 @@
       var tag = (e.target.tagName || "").toLowerCase();
       if (tag === "input" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === " " || e.key === "Enter") {
-        if (tag === "button" && e.target.id !== "flashcard") return;
-        e.preventDefault(); flip();
+        if (tag === "button") return; // let the focused button do its own thing
+        e.preventDefault(); reveal();
       }
       else if (e.key === "ArrowRight") go(1);
       else if (e.key === "ArrowLeft") go(-1);
-      else if (e.key === "1") markAgain();
-      else if (e.key === "2") markKnown();
-      else if (e.key === "s" || e.key === "S") speakCurrent();
+      else if (e.key === "1") gotWrong();
+      else if (e.key === "2") gotRight();
+      else if (e.key === "s" || e.key === "S") { if (!$("btn-speak").hidden) speakCurrent(); }
     });
   }
 
@@ -346,7 +404,7 @@
           var pro = window.PRONOUNS[i].split(" / ")[0];
           return pro + " " + f;
         });
-        speak(b.getAttribute("data-say") + ". " + parts.join(", "), 0.85);
+        speak(b.getAttribute("data-say") + ". " + parts.join(", "), 0.85, b);
         return;
       }
       var t = e.target.closest(".toc a[data-ch]");
@@ -473,4 +531,9 @@
   buildGrammar();
   window.addEventListener("hashchange", route);
   route();
+
+  // Offline support when installed as an app (only works when served over https, e.g. GitHub Pages).
+  if ("serviceWorker" in navigator && location.protocol === "https:" && !/claude\.ai|claudeusercontent/.test(location.hostname)) {
+    try { navigator.serviceWorker.register("sw.js").catch(function () {}); } catch (e) { /* ignore */ }
+  }
 })();
