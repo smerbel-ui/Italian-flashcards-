@@ -1,8 +1,239 @@
 {
   "metadata": {
     "last_updated": "2026-11-17",
-    "total_patterns_tracked": 0,
+    "total_patterns_tracked": 10,
     "language": "Italian"
   },
-  "error_patterns": {}
+  "error_patterns": {
+    "grammar_auxiliary_essere_avere": {
+      "category": "grammar",
+      "subcategory": "passato_prossimo",
+      "description": "",
+      "severity": "critical",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.7,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Ho stato a Roma / Siamo trovati un ristorante",
+          "correct": "Sono stato a Roma / Abbiamo trovato un ristorante",
+          "context": "Movement/state verbs take essere; verbs with a direct object take avere (overcorrected at end)",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_piacere_construction": {
+      "category": "grammar",
+      "subcategory": "piacere",
+      "description": "",
+      "severity": "critical",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.7,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "non ho mi piacevo l'esperienza",
+          "correct": "l'esperienza non mi è piaciuta",
+          "context": "Fixed by exercise 3 (mi sono piaciuti i paesi) and used correctly in ex 5",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_imperfetto_vs_passato_prossimo": {
+      "category": "grammar",
+      "subcategory": "past_tenses",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.6,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "ho tanti più soldi / ho molto fame / non tanti ristoranti sono aperti",
+          "correct": "avevo molti più soldi / avevo molta fame / non c'erano molti ristoranti aperti",
+          "context": "Present tense used for past background states; imperfetto needed",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_noun_gender_agreement": {
+      "category": "grammar",
+      "subcategory": "agreement",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "tantissimi genti / molto fame",
+          "correct": "tantissima gente / molta fame",
+          "context": "gente is singular feminine; fame is feminine",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_prepositions_articulated": {
+      "category": "grammar",
+      "subcategory": "prepositions",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "in 2019 / vicino lago / il nome di ristorante",
+          "correct": "nel 2019 / vicino al lago / il nome del ristorante",
+          "context": "nel + year, vicino a, di + il = del",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_comparative_piu_migliore": {
+      "category": "grammar",
+      "subcategory": "comparatives",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "più migliore",
+          "correct": "migliore / di più",
+          "context": "double comparative",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_negation_non": {
+      "category": "grammar",
+      "subcategory": "negation",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "No mi ricordo",
+          "correct": "Non mi ricordo",
+          "context": "non negates verbs; no is the answer word",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_reflexive_chiamarsi": {
+      "category": "grammar",
+      "subcategory": "reflexive_verbs",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Il mio piatto ha chiamato",
+          "correct": "Il mio piatto si chiamava",
+          "context": "chiamarsi is reflexive",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_word_choice": {
+      "category": "vocabulary",
+      "subcategory": "false_friends",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "dinari / germanico / pesche / un po piatti / così gnocchi",
+          "correct": "soldi / tedesco / pesce / alcuni piatti / come gli gnocchi",
+          "context": "Word choice errors across the session",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "reading_incomplete_answers": {
+      "category": "reading",
+      "subcategory": "comprehension",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-17",
+      "last_occurred": "2026-11-17",
+      "next_review": "2026-11-18",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Answered only part of multi-part questions; missed 'senza prenotazione'",
+          "correct": "Address every part; watch for negators like senza",
+          "context": "Reading exercises 1 and 4",
+          "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    }
+  }
 }

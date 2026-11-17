@@ -14,8 +14,8 @@
   "profile_created": "2026-11-17",
   "last_updated": "2026-11-17",
   "current_streak_days": 0,
-  "total_sessions": 0,
-  "total_study_minutes": 0,
+  "total_sessions": 1,
+  "total_study_minutes": 25,
   "skills": {
     "writing": {
       "current_level": 0,
@@ -24,10 +24,10 @@
       "total_practice_time": 0
     },
     "speaking": {
-      "current_level": 0,
-      "confidence": 0,
-      "last_practiced": null,
-      "total_practice_time": 0
+      "current_level": 1,
+      "confidence": 20,
+      "last_practiced": "2026-11-17",
+      "total_practice_time": 15
     },
     "vocabulary": {
       "current_level": 0,
@@ -36,10 +36,10 @@
       "total_practice_time": 0
     },
     "reading": {
-      "current_level": 0,
-      "confidence": 0,
-      "last_practiced": null,
-      "total_practice_time": 0
+      "current_level": 1,
+      "confidence": 15,
+      "last_practiced": "2026-11-17",
+      "total_practice_time": 10
     },
     "listening": {
       "current_level": 0,
@@ -55,6 +55,12 @@
       "name": "Getting Started",
       "earned_date": "2026-11-17",
       "description": "Created your learning profile"
+    },
+    {
+      "id": "session_session-001_0_completed_first_fluent_session",
+      "name": "Completed first Fluent session",
+      "earned_date": "2026-11-17",
+      "description": "Completed first Fluent session"
     }
   ],
   "preferences": {

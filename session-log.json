@@ -2,8 +2,52 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 0
+    "total_sessions": 1
   },
-  "sessions": [],
-  "milestones": []
+  "sessions": [
+    {
+      "session_id": "session-001",
+      "date": "2026-11-17",
+      "duration_minutes": 25,
+      "skills_practiced": [
+        "speaking",
+        "reading"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 5,
+      "accuracy": 0.6,
+      "score_breakdown": {
+        "speaking": 0.667,
+        "reading": 0.5
+      },
+      "topics_covered": [
+        "travel_narration",
+        "passato_prossimo",
+        "piacere",
+        "restaurant_vocabulary",
+        "reading_comprehension"
+      ],
+      "breakthroughs": [
+        "Went from 'ho mi piacevo' to correct 'mi sono piaciuti i paesi' (plural agreement) within one exercise",
+        "Answered reading questions fully in Italian by exercise 4",
+        "Correctly identified gli = to him"
+      ],
+      "focus_next_session": [
+        "Essere vs avere auxiliary (overcorrected: 'siamo trovati')",
+        "Imperfetto vs passato prossimo for background states (avevo fame, c'era, erano aperti)",
+        "Noun gender: gente, fame",
+        "Answer every part of reading questions"
+      ],
+      "notes": "First session. Learner is male (use masculine agreement). Strong communicator, willing to write long personal travel stories (Rome/Venice 2019, Lake Garda with cousins, Sondrio with sister - maternal family's hometown). Picks up corrections fast (piacere). Skipped retype prompt. Prefers speaking + reading combo.",
+      "achievements_earned": [],
+      "streak_day": 0
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2026-11-17",
+      "milestone": "Completed first Fluent session",
+      "session_id": "session-001"
+    }
+  ]
 }
