@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "algorithm": "SM-2",
+    "last_updated": "2026-11-17",
+    "total_items_tracked": 0,
+    "language": "Italian"
+  },
+  "daily_limits": {
+    "review_items_per_day": 20
+  },
+  "review_queue": {
+    "today": [],
+    "tomorrow": [],
+    "this_week": [],
+    "later": []
+  },
+  "items": {},
+  "algorithm_notes": {
+    "SM-2": "Spaced repetition algorithm - intervals increase based on performance",
+    "quality_scale": "0=incorrect, 1=barely, 2=struggle, 3=correct_with_effort, 4=easy, 5=perfect",
+    "easiness_formula": "EF' = EF + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "learner": {
+    "name": "Sam",
+    "native_language": "English",
+    "other_languages": [],
+    "target_language": "Italian",
+    "current_level": "A2",
+    "target_level": "C1",
+    "daily_goal_minutes": 30,
+    "learning_style": "conversational",
+    "motivation": "travel",
+    "timeline": "2+ years"
+  },
+  "profile_created": "2026-11-17",
+  "last_updated": "2026-11-17",
+  "current_streak_days": 0,
+  "total_sessions": 0,
+  "total_study_minutes": 0,
+  "skills": {
+    "writing": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "speaking": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "vocabulary": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "reading": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "listening": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    }
+  },
+  "focus_areas": [],
+  "achievements": [
+    {
+      "id": "profile_created",
+      "name": "Getting Started",
+      "earned_date": "2026-11-17",
+      "description": "Created your learning profile"
+    }
+  ],
+  "preferences": {
+    "difficulty_preference": "adaptive",
+    "exercise_types_preferred": [
+      "conversation",
+      "quick_drills",
+      "writing"
+    ],
+    "feedback_style": "immediate_with_explanation",
+    "gamification_enabled": false,
+    "use_emojis": true
+  }
+}
