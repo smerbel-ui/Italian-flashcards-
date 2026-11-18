@@ -1,14 +1,16 @@
 {
   "metadata": {
-    "last_updated": "2026-11-17",
+    "last_updated": "2026-11-18",
     "language": "Italian"
   },
   "skills": {
     "writing": {
-      "mastery_level": 0,
-      "confidence_score": 0.0,
-      "total_practice_time": 0,
-      "last_practiced": null
+      "mastery_level": 1,
+      "confidence_score": 0.5,
+      "total_practice_time": 17,
+      "last_practiced": "2026-11-18",
+      "practice_count": 2,
+      "avg_accuracy": 0.5
     },
     "speaking": {
       "mastery_level": 1,
@@ -19,10 +21,12 @@
       "avg_accuracy": 0.667
     },
     "vocabulary": {
-      "mastery_level": 0,
-      "confidence_score": 0.0,
-      "total_practice_time": 0,
-      "last_practiced": null
+      "mastery_level": 1,
+      "confidence_score": 1.0,
+      "total_practice_time": 8,
+      "last_practiced": "2026-11-18",
+      "practice_count": 2,
+      "avg_accuracy": 1.0
     },
     "reading": {
       "mastery_level": 1,

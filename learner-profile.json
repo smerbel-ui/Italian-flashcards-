@@ -12,16 +12,16 @@
     "timeline": "2+ years"
   },
   "profile_created": "2026-11-17",
-  "last_updated": "2026-11-17",
-  "current_streak_days": 0,
-  "total_sessions": 1,
-  "total_study_minutes": 25,
+  "last_updated": "2026-11-18",
+  "current_streak_days": 1,
+  "total_sessions": 2,
+  "total_study_minutes": 50,
   "skills": {
     "writing": {
-      "current_level": 0,
-      "confidence": 0,
-      "last_practiced": null,
-      "total_practice_time": 0
+      "current_level": 1,
+      "confidence": 15,
+      "last_practiced": "2026-11-18",
+      "total_practice_time": 17
     },
     "speaking": {
       "current_level": 1,
@@ -30,10 +30,10 @@
       "total_practice_time": 15
     },
     "vocabulary": {
-      "current_level": 0,
-      "confidence": 0,
-      "last_practiced": null,
-      "total_practice_time": 0
+      "current_level": 1,
+      "confidence": 30,
+      "last_practiced": "2026-11-18",
+      "total_practice_time": 8
     },
     "reading": {
       "current_level": 1,
@@ -61,6 +61,12 @@
       "name": "Completed first Fluent session",
       "earned_date": "2026-11-17",
       "description": "Completed first Fluent session"
+    },
+    {
+      "id": "session_session-002_0_wrote_first_formal_email_in_it",
+      "name": "Wrote first formal email in Italian",
+      "earned_date": "2026-11-18",
+      "description": "Wrote first formal email in Italian"
     }
   ],
   "preferences": {

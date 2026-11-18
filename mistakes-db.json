@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-17",
-    "total_patterns_tracked": 10,
+    "last_updated": "2026-11-18",
+    "total_patterns_tracked": 15,
     "language": "Italian"
   },
   "error_patterns": {
@@ -56,20 +56,26 @@
       "subcategory": "past_tenses",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.6,
-      "last_seen": "2026-11-17",
-      "last_occurred": "2026-11-17",
-      "next_review": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "ho tanti più soldi / ho molto fame / non tanti ristoranti sono aperti",
           "correct": "avevo molti più soldi / avevo molta fame / non c'erano molti ristoranti aperti",
           "context": "Present tense used for past background states; imperfetto needed",
           "date": "2026-11-17"
+        },
+        {
+          "incorrect": "ho fatto un rumore (ongoing) / non ha le batterie / non sono in ritardo / non ha funzionato",
+          "correct": "faceva / non aveva le batterie / non ero in ritardo / non funzionava",
+          "context": "Hotel complaint email; mostly fixed in the targeted drill (9/10)",
+          "date": "2026-11-18"
         }
       ],
       "notes": ""
@@ -79,20 +85,26 @@
       "subcategory": "agreement",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-17",
-      "last_occurred": "2026-11-17",
-      "next_review": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "tantissimi genti / molto fame",
           "correct": "tantissima gente / molta fame",
           "context": "gente is singular feminine; fame is feminine",
           "date": "2026-11-17"
+        },
+        {
+          "incorrect": "il colazione",
+          "correct": "la colazione",
+          "context": "Matched it correctly in the vocab drill but used the wrong article in writing",
+          "date": "2026-11-18"
         }
       ],
       "notes": ""
@@ -102,20 +114,26 @@
       "subcategory": "prepositions",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-17",
-      "last_occurred": "2026-11-17",
-      "next_review": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "in 2019 / vicino lago / il nome di ristorante",
           "correct": "nel 2019 / vicino al lago / il nome del ristorante",
           "context": "nel + year, vicino a, di + il = del",
           "date": "2026-11-17"
+        },
+        {
+          "incorrect": "in suo hotel / il colazione a lunedì",
+          "correct": "nel Vostro hotel / lunedì a colazione",
+          "context": "Possessive needs an article; days take no preposition",
+          "date": "2026-11-18"
         }
       ],
       "notes": ""
@@ -194,20 +212,26 @@
       "subcategory": "false_friends",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-17",
-      "last_occurred": "2026-11-17",
-      "next_review": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "dinari / germanico / pesche / un po piatti / così gnocchi",
           "correct": "soldi / tedesco / pesce / alcuni piatti / come gli gnocchi",
           "context": "Word choice errors across the session",
           "date": "2026-11-17"
+        },
+        {
+          "incorrect": "il remoto / Finalmente (lastly) / Primo / prima volte",
+          "correct": "il telecomando / Infine / Prima di tutto / all'inizio",
+          "context": "Hotel email",
+          "date": "2026-11-18"
         }
       ],
       "notes": ""
@@ -231,6 +255,121 @@
           "correct": "Address every part; watch for negators like senza",
           "context": "Reading exercises 1 and 4",
           "date": "2026-11-17"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_alcuni_vs_un_po": {
+      "category": "grammar",
+      "subcategory": "quantifiers",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "un po' di problemi",
+          "correct": "alcuni problemi",
+          "context": "Second session in a row using un po' di with countables",
+          "date": "2026-11-18"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_lei_for_objects": {
+      "category": "grammar",
+      "subcategory": "pronouns",
+      "description": "",
+      "severity": "critical",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "perché lei non ha le batterie (about the remote)",
+          "correct": "perché non aveva le batterie",
+          "context": "Subject pronoun used for a thing; reads as formal 'you' in a formal email",
+          "date": "2026-11-18"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_dovere_infinitive": {
+      "category": "grammar",
+      "subcategory": "modal_verbs",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "(I had to) chiamato la reception",
+          "correct": "Ho dovuto chiamare la reception",
+          "context": "dovere + infinitive in the past",
+          "date": "2026-11-18"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_partitive_in_negatives": {
+      "category": "grammar",
+      "subcategory": "partitive",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "non c'erano degli asciugamani",
+          "correct": "non c'erano asciugamani",
+          "context": "Partitive usually dropped in negatives",
+          "date": "2026-11-18"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_altro_agreement": {
+      "category": "grammar",
+      "subcategory": "agreement",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-18",
+      "last_occurred": "2026-11-18",
+      "next_review": "2026-11-19",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "un'altro lezione",
+          "correct": "un'altra lezione",
+          "context": "Greeting",
+          "date": "2026-11-18"
         }
       ],
       "notes": ""

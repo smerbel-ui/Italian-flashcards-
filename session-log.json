@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 1
+    "total_sessions": 2
   },
   "sessions": [
     {
@@ -41,6 +41,45 @@
       "notes": "First session. Learner is male (use masculine agreement). Strong communicator, willing to write long personal travel stories (Rome/Venice 2019, Lake Garda with cousins, Sondrio with sister - maternal family's hometown). Picks up corrections fast (piacere). Skipped retype prompt. Prefers speaking + reading combo.",
       "achievements_earned": [],
       "streak_day": 0
+    },
+    {
+      "session_id": "session-002",
+      "date": "2026-11-18",
+      "duration_minutes": 25,
+      "skills_practiced": [
+        "vocabulary",
+        "writing"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 4,
+      "accuracy": 0.75,
+      "score_breakdown": {
+        "vocabulary": 1.0,
+        "writing": 0.5
+      },
+      "topics_covered": [
+        "hotel_vocabulary",
+        "formal_register_lei",
+        "complaint_email",
+        "imperfetto_vs_passato_prossimo",
+        "essere_vs_avere"
+      ],
+      "breakthroughs": [
+        "Essere vs avere 3/3 including salire (fixed yesterday's 'siamo trovati' overcorrection)",
+        "Used formal Può correctly in the first formal email",
+        "Natural 'di problemi ne ho' structure with ne",
+        "Imperfetto/passato prossimo drill 9/10"
+      ],
+      "focus_next_session": [
+        "Clear the spaced-review backlog (/fluent-review)",
+        "alcuni vs un po' di (2 sessions in a row)",
+        "Imperfetto for ongoing states in free writing (drill was fine, free writing not yet)",
+        "Don't use lei/lui for objects",
+        "Learner skips retype prompts; keep prompting"
+      ],
+      "notes": "Session 2. Chose vocab + writing on the hotel topic. Vocab too easy (10/10, 9/10); formal email 6/10 with a good structure and humour. Free writing still slips into the present tense for past states. Skipped retype again.",
+      "achievements_earned": [],
+      "streak_day": 1
     }
   ],
   "milestones": [
@@ -48,6 +87,11 @@
       "date": "2026-11-17",
       "milestone": "Completed first Fluent session",
       "session_id": "session-001"
+    },
+    {
+      "date": "2026-11-18",
+      "milestone": "Wrote first formal email in Italian",
+      "session_id": "session-002"
     }
   ]
 }
