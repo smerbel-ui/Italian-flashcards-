@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-18",
+    "last_updated": "2026-11-20",
     "language": "Italian"
   },
   "skills": {
@@ -22,11 +22,11 @@
     },
     "vocabulary": {
       "mastery_level": 1,
-      "confidence_score": 1.0,
-      "total_practice_time": 8,
-      "last_practiced": "2026-11-18",
-      "practice_count": 2,
-      "avg_accuracy": 1.0
+      "confidence_score": 0.833,
+      "total_practice_time": 23,
+      "last_practiced": "2026-11-20",
+      "practice_count": 32,
+      "avg_accuracy": 0.833
     },
     "reading": {
       "mastery_level": 1,

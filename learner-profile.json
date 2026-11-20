@@ -12,10 +12,10 @@
     "timeline": "2+ years"
   },
   "profile_created": "2026-11-17",
-  "last_updated": "2026-11-18",
+  "last_updated": "2026-11-20",
   "current_streak_days": 1,
-  "total_sessions": 2,
-  "total_study_minutes": 50,
+  "total_sessions": 3,
+  "total_study_minutes": 65,
   "skills": {
     "writing": {
       "current_level": 1,
@@ -31,9 +31,9 @@
     },
     "vocabulary": {
       "current_level": 1,
-      "confidence": 30,
-      "last_practiced": "2026-11-18",
-      "total_practice_time": 8
+      "confidence": 41,
+      "last_practiced": "2026-11-20",
+      "total_practice_time": 23
     },
     "reading": {
       "current_level": 1,
@@ -67,6 +67,12 @@
       "name": "Wrote first formal email in Italian",
       "earned_date": "2026-11-18",
       "description": "Wrote first formal email in Italian"
+    },
+    {
+      "id": "session_session-003_0_completed_first_spaced_review",
+      "name": "Completed first spaced review session",
+      "earned_date": "2026-11-20",
+      "description": "Completed first spaced review session"
     }
   ],
   "preferences": {

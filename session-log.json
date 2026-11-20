@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 2
+    "total_sessions": 3
   },
   "sessions": [
     {
@@ -80,6 +80,38 @@
       "notes": "Session 2. Chose vocab + writing on the hotel topic. Vocab too easy (10/10, 9/10); formal email 6/10 with a good structure and humour. Free writing still slips into the present tense for past states. Skipped retype again.",
       "achievements_earned": [],
       "streak_day": 1
+    },
+    {
+      "session_id": "session-003",
+      "date": "2026-11-20",
+      "duration_minutes": 15,
+      "skills_practiced": [
+        "vocabulary"
+      ],
+      "command_used": "/fluent-review",
+      "exercises_completed": 30,
+      "accuracy": 0.667,
+      "score_breakdown": {
+        "vocabulary": 0.667
+      },
+      "topics_covered": [
+        "spaced_review",
+        "travel_vocabulary",
+        "grammar_error_review"
+      ],
+      "breakthroughs": [
+        "Round 2 grammar fixes 9/10: all previous session errors recognised",
+        "Retested 5 of 6 missed words correctly at the end of the same session"
+      ],
+      "focus_next_session": [
+        "Clear the remaining review backlog",
+        "non vs no in free production",
+        "Drop degli/dei/delle in negatives",
+        "Piove! / ne vale la pena"
+      ],
+      "notes": "Evening review session. Round 1 production 3/10 (2-day gap), Round 2 recognition 9/10, Round 3 production with retests 8/10. Recognition is strong; production of new phrases is weak, so keep testing production. About 25 items still due.",
+      "achievements_earned": [],
+      "streak_day": 1
     }
   ],
   "milestones": [
@@ -92,6 +124,11 @@
       "date": "2026-11-18",
       "milestone": "Wrote first formal email in Italian",
       "session_id": "session-002"
+    },
+    {
+      "date": "2026-11-20",
+      "milestone": "Completed first spaced review session",
+      "session_id": "session-003"
     }
   ]
 }

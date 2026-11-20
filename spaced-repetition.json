@@ -1,8 +1,8 @@
 {
   "metadata": {
     "algorithm": "SM-2",
-    "last_updated": "2026-11-18",
-    "total_items_tracked": 55,
+    "last_updated": "2026-11-20",
+    "total_items_tracked": 61,
     "language": "Italian"
   },
   "daily_limits": {
@@ -10,39 +10,19 @@
   },
   "review_queue": {
     "today": [
-      "vocab_tantissima_gente",
-      "vocab_piovere",
       "vocab_borsa_di_pelle",
       "vocab_valigia",
       "vocab_cupola",
-      "vocab_soldi",
-      "vocab_tedesco",
       "vocab_un_misto",
       "vocab_mi_ricorda",
-      "vocab_senza_prenotazione",
-      "vocab_compreso",
       "vocab_in_due",
       "vocab_fatto_in_casa",
-      "vocab_ne_vale_la_pena",
-      "vocab_pesce_vs_pesche",
-      "vocab_le_tombe",
       "vocab_salato",
       "grammar_gli_le",
-      "grammar_comparative_piu_migliore",
-      "grammar_negation_non",
-      "grammar_reflexive_chiamarsi",
-      "reading_incomplete_answers"
-    ],
-    "tomorrow": [
-      "vocab_alcuni",
       "grammar_piacere_agreement",
-      "grammar_essere_vs_avere_aux",
-      "grammar_auxiliary_essere_avere",
       "grammar_piacere_construction",
       "grammar_imperfetto_vs_passato_prossimo",
-      "grammar_noun_gender_agreement",
-      "grammar_prepositions_articulated",
-      "vocab_word_choice",
+      "reading_incomplete_answers",
       "vocab_camera_doppia",
       "vocab_colazione",
       "vocab_chiave",
@@ -50,25 +30,52 @@
       "vocab_aria_condizionata",
       "vocab_soggiorno",
       "vocab_asciugamani",
-      "vocab_telecomando",
       "vocab_rimborso_parziale",
       "vocab_sconto",
       "vocab_rumore",
-      "vocab_all_inizio",
-      "vocab_infine_vs_finalmente",
       "vocab_prima_di_tutto",
-      "vocab_a_parte_questo",
-      "grammar_ho_dovuto_inf",
       "grammar_formal_lei",
       "vocab_formal_email",
-      "vocab_c_era_piu",
+      "vocab_c_era_piu"
+    ],
+    "tomorrow": [
+      "vocab_tantissima_gente",
+      "vocab_piovere",
+      "vocab_soldi",
+      "vocab_tedesco",
+      "vocab_alcuni",
+      "vocab_senza_prenotazione",
+      "vocab_compreso",
+      "vocab_ne_vale_la_pena",
+      "vocab_pesce_vs_pesche",
+      "vocab_le_tombe",
+      "grammar_noun_gender_agreement",
+      "grammar_prepositions_articulated",
+      "grammar_comparative_piu_migliore",
+      "grammar_negation_non",
+      "grammar_reflexive_chiamarsi",
+      "vocab_word_choice",
+      "vocab_telecomando",
+      "vocab_all_inizio",
+      "vocab_infine_vs_finalmente",
+      "vocab_a_parte_questo",
+      "grammar_ho_dovuto_inf",
       "vocab_alcuni_vs_un_po",
       "grammar_lei_for_objects",
       "grammar_dovere_infinitive",
       "grammar_partitive_in_negatives",
-      "grammar_altro_agreement"
+      "grammar_altro_agreement",
+      "grammar_qualche_plus_singular",
+      "vocab_grave_false_friend",
+      "vocab_gratis_vs_compreso",
+      "vocab_weather_piovere",
+      "grammar_qualche_singular",
+      "grammar_past_participles_irregular"
     ],
-    "this_week": [],
+    "this_week": [
+      "grammar_essere_vs_avere_aux",
+      "grammar_auxiliary_essere_avere"
+    ],
     "later": []
   },
   "items": {
@@ -80,17 +87,24 @@
       "category": "travel",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 3,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
     },
     "vocab_piovere": {
       "id": "vocab_piovere",
@@ -100,17 +114,24 @@
       "category": "weather",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
       "repetitions": 0,
-      "easiness_factor": 2.5,
+      "easiness_factor": 1.96,
       "consecutive_correct": 0,
-      "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 3,
+      "consecutive_incorrect": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 1,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "medium"
+      "total_reviews": 1,
+      "priority": "medium",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 1,
+          "score": 0
+        }
+      ]
     },
     "vocab_borsa_di_pelle": {
       "id": "vocab_borsa_di_pelle",
@@ -180,17 +201,24 @@
       "category": "essentials",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.6,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 5,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 5,
+          "score": 0
+        }
+      ]
     },
     "vocab_tedesco": {
       "id": "vocab_tedesco",
@@ -200,17 +228,24 @@
       "category": "nationalities",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.6,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 5,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "medium"
+      "total_reviews": 1,
+      "priority": "medium",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 5,
+          "score": 0
+        }
+      ]
     },
     "vocab_un_misto": {
       "id": "vocab_un_misto",
@@ -240,21 +275,26 @@
       "category": "quantifiers",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 1.96,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
           "quality": 1,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
+          "quality": 4,
           "score": 0
         }
       ]
@@ -287,17 +327,24 @@
       "category": "restaurant",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.6,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 5,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 5,
+          "score": 0
+        }
+      ]
     },
     "vocab_compreso": {
       "id": "vocab_compreso",
@@ -307,17 +354,24 @@
       "category": "restaurant",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "vocab_in_due": {
       "id": "vocab_in_due",
@@ -367,17 +421,24 @@
       "category": "expressions",
       "difficulty": "B1",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
       "repetitions": 0,
-      "easiness_factor": 2.5,
+      "easiness_factor": 1.96,
       "consecutive_correct": 0,
-      "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
+      "consecutive_incorrect": 1,
+      "last_reviewed": "2026-11-20",
       "last_quality": 1,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 1,
+          "score": 0
+        }
+      ]
     },
     "vocab_pesce_vs_pesche": {
       "id": "vocab_pesce_vs_pesche",
@@ -387,17 +448,24 @@
       "category": "food",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.6,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 5,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "medium"
+      "total_reviews": 1,
+      "priority": "medium",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 5,
+          "score": 0
+        }
+      ]
     },
     "vocab_le_tombe": {
       "id": "vocab_le_tombe",
@@ -407,17 +475,24 @@
       "category": "places",
       "difficulty": "B1",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "low"
+      "total_reviews": 1,
+      "priority": "low",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "vocab_salato": {
       "id": "vocab_salato",
@@ -494,20 +569,25 @@
       "category": "passato_prossimo",
       "difficulty": "A2",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
-      "interval_days": 1,
-      "repetitions": 1,
+      "due_date": "2026-11-26",
+      "interval_days": 6,
+      "repetitions": 2,
       "easiness_factor": 2.5,
-      "consecutive_correct": 1,
+      "consecutive_correct": 2,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
+      "last_reviewed": "2026-11-20",
       "last_quality": 4,
-      "mastery_level": 0,
-      "total_reviews": 1,
+      "mastery_level": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
+          "quality": 4,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
           "quality": 4,
           "score": 0
         }
@@ -521,20 +601,25 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
-      "interval_days": 1,
-      "repetitions": 1,
+      "due_date": "2026-11-26",
+      "interval_days": 6,
+      "repetitions": 2,
       "easiness_factor": 2.5,
-      "consecutive_correct": 1,
+      "consecutive_correct": 2,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
+      "last_reviewed": "2026-11-20",
       "last_quality": 4,
-      "mastery_level": 0,
-      "total_reviews": 1,
+      "mastery_level": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
+          "quality": 4,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
           "quality": 4,
           "score": 0
         }
@@ -602,21 +687,26 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.18,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
           "quality": 2,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
+          "quality": 4,
           "score": 0
         }
       ]
@@ -629,21 +719,26 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.18,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
           "quality": 2,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
+          "quality": 4,
           "score": 0
         }
       ]
@@ -656,17 +751,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.5,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
     },
     "grammar_negation_non": {
       "id": "grammar_negation_non",
@@ -676,17 +778,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
       "repetitions": 0,
-      "easiness_factor": 2.5,
+      "easiness_factor": 2.18,
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-17",
+      "consecutive_incorrect": 2,
+      "last_reviewed": "2026-11-20",
       "last_quality": 2,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 2,
+          "score": 0
+        }
+      ]
     },
     "grammar_reflexive_chiamarsi": {
       "id": "grammar_reflexive_chiamarsi",
@@ -696,17 +805,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-18",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.5,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-17",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
     },
     "vocab_word_choice": {
       "id": "vocab_word_choice",
@@ -716,21 +832,26 @@
       "category": "vocabulary",
       "difficulty": "",
       "created_date": "2026-11-17",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.18,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 1,
+      "total_reviews": 2,
       "priority": "high",
       "review_history": [
         {
           "date": "2026-11-18",
           "quality": 2,
+          "score": 0
+        },
+        {
+          "date": "2026-11-20",
+          "quality": 4,
           "score": 0
         }
       ]
@@ -903,17 +1024,24 @@
       "category": "hotel",
       "difficulty": "A2",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.6,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 5,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 5,
+          "score": 0
+        }
+      ]
     },
     "vocab_rimborso_parziale": {
       "id": "vocab_rimborso_parziale",
@@ -983,17 +1111,24 @@
       "category": "connectors",
       "difficulty": "A2",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "vocab_infine_vs_finalmente": {
       "id": "vocab_infine_vs_finalmente",
@@ -1003,17 +1138,24 @@
       "category": "connectors",
       "difficulty": "B1",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "vocab_prima_di_tutto": {
       "id": "vocab_prima_di_tutto",
@@ -1043,17 +1185,24 @@
       "category": "connectors",
       "difficulty": "B1",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "medium"
+      "total_reviews": 1,
+      "priority": "medium",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "grammar_ho_dovuto_inf": {
       "id": "grammar_ho_dovuto_inf",
@@ -1063,17 +1212,24 @@
       "category": "modal_verbs",
       "difficulty": "A2",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
       "consecutive_incorrect": 0,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "grammar_formal_lei": {
       "id": "grammar_formal_lei",
@@ -1143,17 +1299,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.5,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
     },
     "grammar_lei_for_objects": {
       "id": "grammar_lei_for_objects",
@@ -1163,17 +1326,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
+      "repetitions": 1,
       "easiness_factor": 2.5,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
     },
     "grammar_dovere_infinitive": {
       "id": "grammar_dovere_infinitive",
@@ -1183,17 +1353,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
-      "repetitions": 0,
-      "easiness_factor": 2.5,
-      "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "repetitions": 1,
+      "easiness_factor": 2.36,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 3,
+          "score": 0
+        }
+      ]
     },
     "grammar_partitive_in_negatives": {
       "id": "grammar_partitive_in_negatives",
@@ -1203,17 +1380,24 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
       "interval_days": 1,
       "repetitions": 0,
-      "easiness_factor": 2.5,
+      "easiness_factor": 1.96,
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
-      "last_quality": 2,
+      "consecutive_incorrect": 2,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 1,
       "mastery_level": 0,
-      "total_reviews": 0,
-      "priority": "high"
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 1,
+          "score": 0
+        }
+      ]
     },
     "grammar_altro_agreement": {
       "id": "grammar_altro_agreement",
@@ -1223,13 +1407,140 @@
       "category": "grammar",
       "difficulty": "",
       "created_date": "2026-11-18",
-      "due_date": "2026-11-19",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 1,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 1,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 4,
+      "mastery_level": 0,
+      "total_reviews": 1,
+      "priority": "high",
+      "review_history": [
+        {
+          "date": "2026-11-20",
+          "quality": 4,
+          "score": 0
+        }
+      ]
+    },
+    "grammar_qualche_plus_singular": {
+      "id": "grammar_qualche_plus_singular",
+      "type": "grammar",
+      "content": "qualche problema = alcuni problemi",
+      "answer": "qualche + singular noun = some",
+      "category": "quantifiers",
+      "difficulty": "A2",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 0,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 3,
+      "mastery_level": 0,
+      "total_reviews": 0,
+      "priority": "medium"
+    },
+    "vocab_grave_false_friend": {
+      "id": "vocab_grave_false_friend",
+      "type": "vocabulary",
+      "content": "grave (È grave?)",
+      "answer": "serious (NOT a grave = la tomba)",
+      "category": "false_friends",
+      "difficulty": "A2",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 0,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 2,
+      "mastery_level": 0,
+      "total_reviews": 0,
+      "priority": "low"
+    },
+    "vocab_gratis_vs_compreso": {
+      "id": "vocab_gratis_vs_compreso",
+      "type": "vocabulary",
+      "content": "gratis vs compreso",
+      "answer": "free vs included",
+      "category": "restaurant",
+      "difficulty": "A2",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 0,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 0,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 2,
+      "mastery_level": 0,
+      "total_reviews": 0,
+      "priority": "medium"
+    },
+    "vocab_weather_piovere": {
+      "id": "vocab_weather_piovere",
+      "type": "error_pattern",
+      "content": "Fa piena",
+      "answer": "Piove!",
+      "category": "vocabulary",
+      "difficulty": "",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
       "interval_days": 1,
       "repetitions": 0,
       "easiness_factor": 2.5,
       "consecutive_correct": 0,
       "consecutive_incorrect": 1,
-      "last_reviewed": "2026-11-18",
+      "last_reviewed": "2026-11-20",
+      "last_quality": 2,
+      "mastery_level": 0,
+      "total_reviews": 0,
+      "priority": "high"
+    },
+    "grammar_qualche_singular": {
+      "id": "grammar_qualche_singular",
+      "type": "error_pattern",
+      "content": "qualche problemi",
+      "answer": "qualche problema / alcuni problemi",
+      "category": "grammar",
+      "difficulty": "",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 0,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "last_reviewed": "2026-11-20",
+      "last_quality": 2,
+      "mastery_level": 0,
+      "total_reviews": 0,
+      "priority": "high"
+    },
+    "grammar_past_participles_irregular": {
+      "id": "grammar_past_participles_irregular",
+      "type": "error_pattern",
+      "content": "ho devoto chiamare",
+      "answer": "ho dovuto chiamare",
+      "category": "grammar",
+      "difficulty": "",
+      "created_date": "2026-11-20",
+      "due_date": "2026-11-21",
+      "interval_days": 1,
+      "repetitions": 0,
+      "easiness_factor": 2.5,
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "last_reviewed": "2026-11-20",
       "last_quality": 2,
       "mastery_level": 0,
       "total_reviews": 0,
