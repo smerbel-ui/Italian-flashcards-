@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-20",
-    "total_patterns_tracked": 19,
+    "last_updated": "2026-11-22",
+    "total_patterns_tracked": 20,
     "language": "Italian"
   },
   "error_patterns": {
@@ -85,14 +85,14 @@
       "subcategory": "agreement",
       "description": "",
       "severity": "moderate",
-      "frequency": 2,
+      "frequency": 3,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-18",
-      "last_occurred": "2026-11-18",
-      "next_review": "2026-11-19",
+      "last_seen": "2026-11-22",
+      "last_occurred": "2026-11-22",
+      "next_review": "2026-11-23",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
+      "consecutive_incorrect": 3,
       "examples": [
         {
           "incorrect": "tantissimi genti / molto fame",
@@ -105,6 +105,12 @@
           "correct": "la colazione",
           "context": "Matched it correctly in the vocab drill but used the wrong article in writing",
           "date": "2026-11-18"
+        },
+        {
+          "incorrect": "il colazione è contro",
+          "correct": "la colazione è compresa",
+          "context": "Third time 'il colazione'. Taught the rule: all -zione nouns are feminine. Participle agreement compresa.",
+          "date": "2026-11-22"
         }
       ],
       "notes": ""
@@ -218,14 +224,14 @@
       "subcategory": "false_friends",
       "description": "",
       "severity": "moderate",
-      "frequency": 2,
+      "frequency": 3,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-18",
-      "last_occurred": "2026-11-18",
-      "next_review": "2026-11-19",
+      "last_seen": "2026-11-22",
+      "last_occurred": "2026-11-22",
+      "next_review": "2026-11-23",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
+      "consecutive_incorrect": 3,
       "examples": [
         {
           "incorrect": "dinari / germanico / pesche / un po piatti / così gnocchi",
@@ -238,6 +244,12 @@
           "correct": "il telecomando / Infine / Prima di tutto / all'inizio",
           "context": "Hotel email",
           "date": "2026-11-18"
+        },
+        {
+          "incorrect": "cupola = cup / sconto = bill / l'assecondo / la chieva / gente (for Gentile)",
+          "correct": "dome / discount / l'ascensore / la chiave / Gentile",
+          "context": "Old vocabulary not reviewed for 4-5 days",
+          "date": "2026-11-22"
         }
       ],
       "notes": ""
@@ -474,6 +486,29 @@
           "correct": "ho dovuto chiamare",
           "context": "dovere → dovuto (cf. potere → potuto)",
           "date": "2026-11-20"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_ricordare_forms": {
+      "category": "grammar",
+      "subcategory": "verb_forms",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-22",
+      "last_occurred": "2026-11-22",
+      "next_review": "2026-11-23",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Questo cibo mi ricordo mia nonna",
+          "correct": "Questo cibo mi ricorda mia nonna",
+          "context": "ricordo = I remember; mi ricorda = it reminds me",
+          "date": "2026-11-22"
         }
       ],
       "notes": ""

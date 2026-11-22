@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "last_updated": "2026-11-20",
+    "last_updated": "2026-11-22",
     "language": "Italian",
     "tracking_started": "2026-11-17"
   },
   "overall_stats": {
-    "total_sessions": 3,
-    "total_exercises": 39,
-    "total_correct": 26,
-    "total_incorrect": 13,
+    "total_sessions": 4,
+    "total_exercises": 69,
+    "total_correct": 46,
+    "total_incorrect": 23,
     "accuracy_rate": 0.667,
-    "total_study_minutes": 65,
-    "average_session_duration": 22
+    "total_study_minutes": 80,
+    "average_session_duration": 20
   },
   "accuracy_trend": [
     {
@@ -26,6 +26,11 @@
     },
     {
       "date": "2026-11-20",
+      "accuracy": 0.667,
+      "exercises": 30
+    },
+    {
+      "date": "2026-11-22",
       "accuracy": 0.667,
       "exercises": 30
     }
@@ -48,12 +53,12 @@
       "incorrect_count": 1
     },
     "vocabulary": {
-      "sessions": 2,
-      "accuracy": 0.833,
-      "last_practiced": "2026-11-20",
-      "exercises_completed": 32,
-      "correct_count": 22,
-      "incorrect_count": 10
+      "sessions": 3,
+      "accuracy": 0.778,
+      "last_practiced": "2026-11-22",
+      "exercises_completed": 62,
+      "correct_count": 42,
+      "incorrect_count": 20
     },
     "reading": {
       "sessions": 1,
@@ -72,9 +77,9 @@
   "weekly_summary": [
     {
       "week_start": "2026-11-16",
-      "sessions": 3,
-      "total_minutes": 65,
-      "accuracy": 0.672
+      "sessions": 4,
+      "total_minutes": 80,
+      "accuracy": 0.671
     }
   ]
 }

@@ -12,10 +12,10 @@
     "timeline": "2+ years"
   },
   "profile_created": "2026-11-17",
-  "last_updated": "2026-11-20",
+  "last_updated": "2026-11-22",
   "current_streak_days": 1,
-  "total_sessions": 3,
-  "total_study_minutes": 65,
+  "total_sessions": 4,
+  "total_study_minutes": 80,
   "skills": {
     "writing": {
       "current_level": 1,
@@ -31,9 +31,9 @@
     },
     "vocabulary": {
       "current_level": 1,
-      "confidence": 41,
-      "last_practiced": "2026-11-20",
-      "total_practice_time": 23
+      "confidence": 49,
+      "last_practiced": "2026-11-22",
+      "total_practice_time": 38
     },
     "reading": {
       "current_level": 1,

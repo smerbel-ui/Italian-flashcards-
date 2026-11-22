@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 3
+    "total_sessions": 4
   },
   "sessions": [
     {
@@ -110,6 +110,37 @@
         "Piove! / ne vale la pena"
       ],
       "notes": "Evening review session. Round 1 production 3/10 (2-day gap), Round 2 recognition 9/10, Round 3 production with retests 8/10. Recognition is strong; production of new phrases is weak, so keep testing production. About 25 items still due.",
+      "achievements_earned": [],
+      "streak_day": 1
+    },
+    {
+      "session_id": "session-004",
+      "date": "2026-11-22",
+      "duration_minutes": 15,
+      "skills_practiced": [
+        "vocabulary"
+      ],
+      "command_used": "/fluent-review",
+      "exercises_completed": 30,
+      "accuracy": 0.667,
+      "score_breakdown": {
+        "vocabulary": 0.667
+      },
+      "topics_covered": [
+        "spaced_review",
+        "hotel_vocabulary",
+        "noun_gender"
+      ],
+      "breakthroughs": [
+        "All 4 weak spots from session 3 fixed: piove, ne vale la pena, non, no partitive in negatives",
+        "Word-bank retest round 10/10"
+      ],
+      "focus_next_session": [
+        "la colazione / -zione = feminine",
+        "Old items fade after 4-5 days: daily short reviews",
+        "mi ricorda vs ricordo"
+      ],
+      "notes": "Morning review after a 2-day gap. R1 recognition of the oldest items 5/10, R2 production 5.5/10 (all previous weak spots fixed), R3 word-bank retest 10/10. Production of rarely seen words is the main gap; daily consistency is the biggest lever.",
       "achievements_earned": [],
       "streak_day": 1
     }
