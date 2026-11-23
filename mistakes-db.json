@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-22",
-    "total_patterns_tracked": 20,
+    "last_updated": "2026-11-23",
+    "total_patterns_tracked": 25,
     "language": "Italian"
   },
   "error_patterns": {
@@ -56,14 +56,14 @@
       "subcategory": "past_tenses",
       "description": "",
       "severity": "moderate",
-      "frequency": 2,
+      "frequency": 3,
       "mastery_level": 0,
       "difficulty_score": 0.6,
-      "last_seen": "2026-11-18",
-      "last_occurred": "2026-11-18",
-      "next_review": "2026-11-19",
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
+      "consecutive_incorrect": 3,
       "examples": [
         {
           "incorrect": "ho tanti più soldi / ho molto fame / non tanti ristoranti sono aperti",
@@ -76,6 +76,12 @@
           "correct": "faceva / non aveva le batterie / non ero in ritardo / non funzionava",
           "context": "Hotel complaint email; mostly fixed in the targeted drill (9/10)",
           "date": "2026-11-18"
+        },
+        {
+          "incorrect": "Quando ero piccolo ho molti animali... abbiamo troppo polli... non vivono... sono piccoli",
+          "correct": "avevo / avevamo troppi polli / non vivevano / erano",
+          "context": "Started in the imperfetto then slipped back to the present 5 times despite scaffolding; pioveva was correct earlier",
+          "date": "2026-11-23"
         }
       ],
       "notes": ""
@@ -85,14 +91,14 @@
       "subcategory": "agreement",
       "description": "",
       "severity": "moderate",
-      "frequency": 3,
+      "frequency": 4,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-22",
-      "last_occurred": "2026-11-22",
-      "next_review": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 3,
+      "consecutive_incorrect": 4,
       "examples": [
         {
           "incorrect": "tantissimi genti / molto fame",
@@ -111,6 +117,12 @@
           "correct": "la colazione è compresa",
           "context": "Third time 'il colazione'. Taught the rule: all -zione nouns are feminine. Participle agreement compresa.",
           "date": "2026-11-22"
+        },
+        {
+          "incorrect": "un conversazione / Sono andata (male speaker)",
+          "correct": "una conversazione / Sono andato",
+          "context": "-zione feminine rule from yesterday; participle agreement with the speaker's gender",
+          "date": "2026-11-23"
         }
       ],
       "notes": ""
@@ -201,20 +213,26 @@
       "subcategory": "reflexive_verbs",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-17",
-      "last_occurred": "2026-11-17",
-      "next_review": "2026-11-18",
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "Il mio piatto ha chiamato",
           "correct": "Il mio piatto si chiamava",
           "context": "chiamarsi is reflexive",
           "date": "2026-11-17"
+        },
+        {
+          "incorrect": "Il mio cane chiama Eddie / I miei gatti (reflexive) chiamano",
+          "correct": "Il mio cane si chiama Eddie / I miei gatti si chiamavano",
+          "context": "3rd occurrence; knows a reflexive is needed but not the 'si' form",
+          "date": "2026-11-23"
         }
       ],
       "notes": ""
@@ -224,14 +242,14 @@
       "subcategory": "false_friends",
       "description": "",
       "severity": "moderate",
-      "frequency": 3,
+      "frequency": 4,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-22",
-      "last_occurred": "2026-11-22",
-      "next_review": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 3,
+      "consecutive_incorrect": 4,
       "examples": [
         {
           "incorrect": "dinari / germanico / pesche / un po piatti / così gnocchi",
@@ -250,6 +268,12 @@
           "correct": "dome / discount / l'ascensore / la chiave / Gentile",
           "context": "Old vocabulary not reviewed for 4-5 days",
           "date": "2026-11-22"
+        },
+        {
+          "incorrect": "giochi (= matches) / non conosco come dico / vivono più lunghi / placidi",
+          "correct": "partite / non so come si dice / vivevano a lungo / tranquilli",
+          "context": "Conversation about the weekend and pets",
+          "date": "2026-11-23"
         }
       ],
       "notes": ""
@@ -509,6 +533,121 @@
           "correct": "Questo cibo mi ricorda mia nonna",
           "context": "ricordo = I remember; mi ricorda = it reminds me",
           "date": "2026-11-22"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_da_plus_person": {
+      "category": "grammar",
+      "subcategory": "prepositions",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Sono andata la casa della mamma / quando dov'è di mio suoceri",
+          "correct": "Sono andato da mia mamma / quando è dai miei suoceri",
+          "context": "da + person = at/to someone's place",
+          "date": "2026-11-23"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_giocare_a": {
+      "category": "grammar",
+      "subcategory": "prepositions",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "giocato con le carte di giochi / non di cuoncan",
+          "correct": "giocato a carte / non a Coon Can",
+          "context": "Fixed in the next turn",
+          "date": "2026-11-23"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_comparative_di": {
+      "category": "grammar",
+      "subcategory": "comparatives",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Mia madre è migliore per me",
+          "correct": "Mia madre è più brava di me",
+          "context": "than = di; skill = più bravo/a",
+          "date": "2026-11-23"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_e_vs_è": {
+      "category": "grammar",
+      "subcategory": "verbs",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "e un cane buono",
+          "correct": "ed è un bravo cane",
+          "context": "Missing verb è",
+          "date": "2026-11-23"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_word_order_misc": {
+      "category": "grammar",
+      "subcategory": "word_order",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-23",
+      "last_occurred": "2026-11-23",
+      "next_review": "2026-11-24",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "anche ho portato il mio cane / I tutti miei animali / troppo polli",
+          "correct": "ho portato anche il mio cane / Tutti i miei animali / troppi polli",
+          "context": "Placement of anche and tutti; agreement of troppo",
+          "date": "2026-11-23"
         }
       ],
       "notes": ""

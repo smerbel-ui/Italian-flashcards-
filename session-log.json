@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 4
+    "total_sessions": 5
   },
   "sessions": [
     {
@@ -143,6 +143,42 @@
       "notes": "Morning review after a 2-day gap. R1 recognition of the oldest items 5/10, R2 production 5.5/10 (all previous weak spots fixed), R3 word-bank retest 10/10. Production of rarely seen words is the main gap; daily consistency is the biggest lever.",
       "achievements_earned": [],
       "streak_day": 1
+    },
+    {
+      "session_id": "session-005",
+      "date": "2026-11-23",
+      "duration_minutes": 20,
+      "skills_practiced": [
+        "speaking"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 3,
+      "accuracy": 0.667,
+      "score_breakdown": {
+        "speaking": 0.667
+      },
+      "topics_covered": [
+        "conversation_weekend",
+        "family",
+        "pets",
+        "childhood_imperfetto",
+        "chiamarsi"
+      ],
+      "breakthroughs": [
+        "Fixed 'giocare a' immediately after correction",
+        "Used pioveva (imperfetto weather) correctly unprompted",
+        "Used avere for age (ha due anni)",
+        "Knew chiamarsi needs a reflexive"
+      ],
+      "focus_next_session": [
+        "Imperfetto mode for a whole description paragraph (childhood / how things were)",
+        "chiamarsi: si chiama / si chiamano",
+        "da + person",
+        "Retype prompts are always skipped: try a shorter retype"
+      ],
+      "notes": "Short conversation (3 turns): weekend at mum's with dog Eddie (Golden Retriever, 2 y/o, called Eddie/Eduardo/Edward depending on location), card games (Bananagrams, Bullshit, Coon Can; mum is better), childhood farm with 3 cats (Poki, Dora, Mr T), 2 dogs (Robbie, Spot) and 20 chickens. Has in-laws (suoceri). Consecutive day after session 4. Scores 6, 6, 5.",
+      "achievements_earned": [],
+      "streak_day": 2
     }
   ],
   "milestones": [

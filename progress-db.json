@@ -1,16 +1,16 @@
 {
   "metadata": {
-    "last_updated": "2026-11-22",
+    "last_updated": "2026-11-23",
     "language": "Italian",
     "tracking_started": "2026-11-17"
   },
   "overall_stats": {
-    "total_sessions": 4,
-    "total_exercises": 69,
-    "total_correct": 46,
-    "total_incorrect": 23,
+    "total_sessions": 5,
+    "total_exercises": 72,
+    "total_correct": 48,
+    "total_incorrect": 24,
     "accuracy_rate": 0.667,
-    "total_study_minutes": 80,
+    "total_study_minutes": 100,
     "average_session_duration": 20
   },
   "accuracy_trend": [
@@ -33,6 +33,11 @@
       "date": "2026-11-22",
       "accuracy": 0.667,
       "exercises": 30
+    },
+    {
+      "date": "2026-11-23",
+      "accuracy": 0.667,
+      "exercises": 3
     }
   ],
   "skill_progress": {
@@ -45,12 +50,12 @@
       "incorrect_count": 1
     },
     "speaking": {
-      "sessions": 1,
+      "sessions": 2,
       "accuracy": 0.667,
-      "last_practiced": "2026-11-17",
-      "exercises_completed": 3,
-      "correct_count": 2,
-      "incorrect_count": 1
+      "last_practiced": "2026-11-23",
+      "exercises_completed": 6,
+      "correct_count": 4,
+      "incorrect_count": 2
     },
     "vocabulary": {
       "sessions": 3,
@@ -80,6 +85,12 @@
       "sessions": 4,
       "total_minutes": 80,
       "accuracy": 0.671
+    },
+    {
+      "week_start": "2026-11-23",
+      "sessions": 1,
+      "total_minutes": 20,
+      "accuracy": 0.667
     }
   ]
 }
