@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-23",
-    "total_patterns_tracked": 25,
+    "last_updated": "2026-11-24",
+    "total_patterns_tracked": 28,
     "language": "Italian"
   },
   "error_patterns": {
@@ -56,14 +56,14 @@
       "subcategory": "past_tenses",
       "description": "",
       "severity": "moderate",
-      "frequency": 3,
+      "frequency": 4,
       "mastery_level": 0,
       "difficulty_score": 0.6,
-      "last_seen": "2026-11-23",
-      "last_occurred": "2026-11-23",
-      "next_review": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 3,
+      "consecutive_incorrect": 4,
       "examples": [
         {
           "incorrect": "ho tanti più soldi / ho molto fame / non tanti ristoranti sono aperti",
@@ -82,6 +82,12 @@
           "correct": "avevo / avevamo troppi polli / non vivevano / erano",
           "context": "Started in the imperfetto then slipped back to the present 5 times despite scaffolding; pioveva was correct earlier",
           "date": "2026-11-23"
+        },
+        {
+          "incorrect": "A volte campeggiamo",
+          "correct": "A volte andavamo in campeggio",
+          "context": "One slip in the summers turn; the Christmas turn had 10/10 verbs in the imperfetto",
+          "date": "2026-11-24"
         }
       ],
       "notes": ""
@@ -91,14 +97,14 @@
       "subcategory": "agreement",
       "description": "",
       "severity": "moderate",
-      "frequency": 4,
+      "frequency": 5,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-23",
-      "last_occurred": "2026-11-23",
-      "next_review": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 4,
+      "consecutive_incorrect": 5,
       "examples": [
         {
           "incorrect": "tantissimi genti / molto fame",
@@ -123,6 +129,12 @@
           "correct": "una conversazione / Sono andato",
           "context": "-zione feminine rule from yesterday; participle agreement with the speaker's gender",
           "date": "2026-11-23"
+        },
+        {
+          "incorrect": "i genti non festeggiavano / la famiglia ... erano Tedeschi",
+          "correct": "la gente non festeggiava / la famiglia era tedesca",
+          "context": "gente and famiglia are singular, so the verb is singular (gente first came up in session 1)",
+          "date": "2026-11-24"
         }
       ],
       "notes": ""
@@ -132,14 +144,14 @@
       "subcategory": "prepositions",
       "description": "",
       "severity": "moderate",
-      "frequency": 2,
+      "frequency": 3,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-18",
-      "last_occurred": "2026-11-18",
-      "next_review": "2026-11-19",
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 2,
+      "consecutive_incorrect": 3,
       "examples": [
         {
           "incorrect": "in 2019 / vicino lago / il nome di ristorante",
@@ -152,6 +164,12 @@
           "correct": "nel Vostro hotel / lunedì a colazione",
           "context": "Possessive needs an article; days take no preposition",
           "date": "2026-11-18"
+        },
+        {
+          "incorrect": "diverso di Europa / In mia famiglia / dello mio padre / Al natale",
+          "correct": "diverso dall'Europa / Nella mia famiglia / di mio padre / A Natale",
+          "context": "diverso da; singular family member without an article; A Natale",
+          "date": "2026-11-24"
         }
       ],
       "notes": ""
@@ -634,20 +652,95 @@
       "subcategory": "word_order",
       "description": "",
       "severity": "minor",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-23",
-      "last_occurred": "2026-11-23",
-      "next_review": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "anche ho portato il mio cane / I tutti miei animali / troppo polli",
           "correct": "ho portato anche il mio cane / Tutti i miei animali / troppi polli",
           "context": "Placement of anche and tutti; agreement of troppo",
           "date": "2026-11-23"
+        },
+        {
+          "incorrect": "I tutti miei animali / più lunghi / più buona per me",
+          "correct": "Tutti i miei / a lungo / più brava di me",
+          "context": "Review round 1; all fixed in round 2",
+          "date": "2026-11-24"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_da_overgeneralised_to_places": {
+      "category": "grammar",
+      "subcategory": "prepositions",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "andavamo dalla spiaggia / dall'isola di Fraser Island",
+          "correct": "andavamo in spiaggia / su Fraser Island",
+          "context": "da is for people only; places take in/a/al/su",
+          "date": "2026-11-24"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_giocare_a": {
+      "category": "grammar",
+      "subcategory": "prepositions",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "giocavamo il PS2",
+          "correct": "giocavamo alla PS2",
+          "context": "giocare a + game",
+          "date": "2026-11-24"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_verb_person_agreement": {
+      "category": "grammar",
+      "subcategory": "conjugation",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.5,
+      "last_seen": "2026-11-24",
+      "last_occurred": "2026-11-24",
+      "next_review": "2026-11-25",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "i miei nonni andavamo noi / Perché facevamo molto caldo / In mia famiglia festeggiavano",
+          "correct": "i miei nonni venivano da noi / Siccome faceva molto caldo / Nella mia famiglia festeggiavamo",
+          "context": "Right tense, wrong person; weather is impersonal (faceva)",
+          "date": "2026-11-24"
         }
       ],
       "notes": ""

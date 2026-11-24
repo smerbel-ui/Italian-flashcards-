@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 5
+    "total_sessions": 6
   },
   "sessions": [
     {
@@ -179,6 +179,46 @@
       "notes": "Short conversation (3 turns): weekend at mum's with dog Eddie (Golden Retriever, 2 y/o, called Eddie/Eduardo/Edward depending on location), card games (Bananagrams, Bullshit, Coon Can; mum is better), childhood farm with 3 cats (Poki, Dora, Mr T), 2 dogs (Robbie, Spot) and 20 chickens. Has in-laws (suoceri). Consecutive day after session 4. Scores 6, 6, 5.",
       "achievements_earned": [],
       "streak_day": 2
+    },
+    {
+      "session_id": "session-006",
+      "date": "2026-11-24",
+      "duration_minutes": 25,
+      "skills_practiced": [
+        "vocabulary",
+        "speaking"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 18,
+      "accuracy": 0.667,
+      "score_breakdown": {
+        "vocabulary": 0.688,
+        "speaking": 0.5
+      },
+      "topics_covered": [
+        "spaced_review",
+        "childhood_summers",
+        "christmas_in_australia",
+        "imperfetto",
+        "place_prepositions"
+      ],
+      "breakthroughs": [
+        "Christmas turn: 10/10 verbs in the imperfetto (yesterday 0/5)",
+        "si chiama finally correct",
+        "Review round 2: all 6 hooked rules transferred to new sentences",
+        "Used più ... di correctly (più importante di Natale)",
+        "Used da + person correctly in free speech (dai miei zii)",
+        "Used the conditional dovremmo unprompted"
+      ],
+      "focus_next_session": [
+        "da only for people; places take in/a/al/su",
+        "gente / famiglia take singular verbs",
+        "Verb person agreement (who is doing it?); weather = faceva",
+        "La Vigilia di Natale"
+      ],
+      "notes": "Day 3 of the streak. Grew up in Australia (Christmas in summer, Fraser and Moreton Islands, river city, so probably Brisbane); father's family is German, so they celebrated Christmas Eve; played PS2 with his sister; grandparents came for Christmas; ate prawns, steak, ravioli, sausages and pavlova; water fights. Huge imperfetto improvement.",
+      "achievements_earned": [],
+      "streak_day": 3
     }
   ],
   "milestones": [
