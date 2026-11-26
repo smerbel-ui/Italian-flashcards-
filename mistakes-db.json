@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-24",
-    "total_patterns_tracked": 28,
+    "last_updated": "2026-11-26",
+    "total_patterns_tracked": 30,
     "language": "Italian"
   },
   "error_patterns": {
@@ -144,14 +144,14 @@
       "subcategory": "prepositions",
       "description": "",
       "severity": "moderate",
-      "frequency": 3,
+      "frequency": 4,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-24",
-      "last_occurred": "2026-11-24",
-      "next_review": "2026-11-25",
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 3,
+      "consecutive_incorrect": 4,
       "examples": [
         {
           "incorrect": "in 2019 / vicino lago / il nome di ristorante",
@@ -170,6 +170,12 @@
           "correct": "diverso dall'Europa / Nella mia famiglia / di mio padre / A Natale",
           "context": "diverso da; singular family member without an article; A Natale",
           "date": "2026-11-24"
+        },
+        {
+          "incorrect": "A sabato / nel un locale / a il parco / diverso di",
+          "correct": "Sabato / in un locale / al parco / diverso da",
+          "context": "Days take no preposition; contractions",
+          "date": "2026-11-26"
         }
       ],
       "notes": ""
@@ -260,14 +266,14 @@
       "subcategory": "false_friends",
       "description": "",
       "severity": "moderate",
-      "frequency": 4,
+      "frequency": 5,
       "mastery_level": 0,
       "difficulty_score": 0.4,
-      "last_seen": "2026-11-23",
-      "last_occurred": "2026-11-23",
-      "next_review": "2026-11-24",
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 4,
+      "consecutive_incorrect": 5,
       "examples": [
         {
           "incorrect": "dinari / germanico / pesche / un po piatti / così gnocchi",
@@ -292,6 +298,12 @@
           "correct": "partite / non so come si dice / vivevano a lungo / tranquilli",
           "context": "Conversation about the weekend and pets",
           "date": "2026-11-23"
+        },
+        {
+          "incorrect": "un plano / i decorativi / parco di cane / con mio amico",
+          "correct": "programmi / le decorazioni / parco per cani / con un mio amico",
+          "context": "Weekend plans",
+          "date": "2026-11-26"
         }
       ],
       "notes": ""
@@ -681,20 +693,26 @@
       "subcategory": "prepositions",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-24",
-      "last_occurred": "2026-11-24",
-      "next_review": "2026-11-25",
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "andavamo dalla spiaggia / dall'isola di Fraser Island",
           "correct": "andavamo in spiaggia / su Fraser Island",
           "context": "da is for people only; places take in/a/al/su",
           "date": "2026-11-24"
+        },
+        {
+          "incorrect": "Andavamo da spiaggia / andavamo da montagna",
+          "correct": "Andavamo in spiaggia / in montagna",
+          "context": "Wrong in review rounds 1 and 2, but correct in free speech (in giardino, in un locale). Taught the 'who?' test.",
+          "date": "2026-11-26"
         }
       ],
       "notes": ""
@@ -727,20 +745,72 @@
       "subcategory": "conjugation",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.5,
-      "last_seen": "2026-11-24",
-      "last_occurred": "2026-11-24",
-      "next_review": "2026-11-25",
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "i miei nonni andavamo noi / Perché facevamo molto caldo / In mia famiglia festeggiavano",
           "correct": "i miei nonni venivano da noi / Siccome faceva molto caldo / Nella mia famiglia festeggiavamo",
           "context": "Right tense, wrong person; weather is impersonal (faceva)",
           "date": "2026-11-24"
+        },
+        {
+          "incorrect": "I miei nonni venivo da noi / mi aiuta mia moglie (meant 'I help')",
+          "correct": "venivano da noi / aiuto mia moglie",
+          "context": "Who is the subject?",
+          "date": "2026-11-26"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_siccome_vs_quindi": {
+      "category": "vocabulary",
+      "subcategory": "connectors",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Millie ha una cena, siccome vado in un locale",
+          "correct": "Millie ha una cena, quindi vado in un locale",
+          "context": "siccome = since (cause); quindi = so (result)",
+          "date": "2026-11-26"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_pensare_not_reflexive": {
+      "category": "grammar",
+      "subcategory": "verbs",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-11-26",
+      "last_occurred": "2026-11-26",
+      "next_review": "2026-11-27",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "Mi penso che facciamo non niente",
+          "correct": "Penso che non facciamo niente",
+          "context": "pensare is not reflexive; the non + verb + niente sandwich",
+          "date": "2026-11-26"
         }
       ],
       "notes": ""

@@ -2,7 +2,7 @@
   "metadata": {
     "language": "Italian",
     "learner_name": "Sam",
-    "total_sessions": 6
+    "total_sessions": 7
   },
   "sessions": [
     {
@@ -219,6 +219,42 @@
       "notes": "Day 3 of the streak. Grew up in Australia (Christmas in summer, Fraser and Moreton Islands, river city, so probably Brisbane); father's family is German, so they celebrated Christmas Eve; played PS2 with his sister; grandparents came for Christmas; ate prawns, steak, ravioli, sausages and pavlova; water fights. Huge imperfetto improvement.",
       "achievements_earned": [],
       "streak_day": 3
+    },
+    {
+      "session_id": "session-007",
+      "date": "2026-11-26",
+      "duration_minutes": 20,
+      "skills_practiced": [
+        "vocabulary",
+        "speaking"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 19,
+      "accuracy": 0.526,
+      "score_breakdown": {
+        "vocabulary": 0.556,
+        "speaking": 0.0
+      },
+      "topics_covered": [
+        "spaced_review",
+        "weekend_plans",
+        "place_prepositions",
+        "connectors"
+      ],
+      "breakthroughs": [
+        "'Non mi ricordo' perfect and automatic (was 'No mi ricordo' in session 1)",
+        "Zero da errors in free speech: in giardino, in un locale",
+        "Review 2.5/10 → 7.5/8 with hooks"
+      ],
+      "focus_next_session": [
+        "siccome vs quindi",
+        "No preposition before days",
+        "Contractions al/nel and 'in un'",
+        "Encourage 10-min daily reviews: backlog of 90+ items"
+      ],
+      "notes": "Missed 25 Nov. Wife is Millie. Weekend: gardening, helping with chores, Millie's dinner while Sam goes to a bar with a friend, dog park with Eddie if no rain, hanging Christmas decorations on Sunday. Never-reviewed items fade fast; the review backlog is large (92).",
+      "achievements_earned": [],
+      "streak_day": 1
     }
   ],
   "milestones": [
