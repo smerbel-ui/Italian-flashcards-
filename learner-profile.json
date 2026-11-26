@@ -1,0 +1,80 @@
+{
+  "learner": {
+    "name": "Sam",
+    "native_language": "English",
+    "other_languages": [
+      "Italian (A2)"
+    ],
+    "target_language": "German",
+    "current_level": "B2",
+    "target_level": "C1",
+    "daily_goal_minutes": 30,
+    "learning_style": "academic",
+    "motivation": "exam",
+    "exam": "Goethe-Zertifikat C1",
+    "timeline": "12 months",
+    "placement_check": {
+      "date": "2026-11-26",
+      "score": "5/5",
+      "note": "Quick 5-question check maps 5/5 to C1; started at B2 because C1 is the target. Adjust difficulty from real sessions."
+    }
+  },
+  "profile_created": "2026-11-26",
+  "last_updated": "2026-11-26",
+  "current_streak_days": 0,
+  "total_sessions": 0,
+  "total_study_minutes": 0,
+  "skills": {
+    "writing": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "speaking": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "vocabulary": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "reading": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "listening": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    }
+  },
+  "focus_areas": [],
+  "achievements": [
+    {
+      "id": "profile_created",
+      "name": "Getting Started",
+      "earned_date": "2026-11-26",
+      "description": "Created your learning profile"
+    }
+  ],
+  "preferences": {
+    "difficulty_preference": "adaptive",
+    "exercise_types_preferred": [
+      "writing",
+      "reading",
+      "quick_drills",
+      "conversation"
+    ],
+    "feedback_style": "immediate_with_explanation",
+    "gamification_enabled": false,
+    "use_emojis": true
+  }
+}
